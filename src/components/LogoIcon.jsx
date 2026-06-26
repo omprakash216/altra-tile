@@ -9,11 +9,11 @@ export default function LogoIcon({ className = "h-12 w-auto", light = false }) {
   return (
     <svg className={className} viewBox="0 0 220 75" fill="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        {/* Swoosh gradient (Light Rose to Maroon) */}
+        {/* Swoosh gradient (Light Gold to Deep Gold) */}
         <linearGradient id="swooshGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#c7768c" />
-          <stop offset="50%" stopColor="#a6425f" />
-          <stop offset="100%" stopColor="#752d41" />
+          <stop offset="0%" stopColor="#fff1c2" />
+          <stop offset="50%" stopColor="#d4af37" />
+          <stop offset="100%" stopColor="#8e6f22" />
         </linearGradient>
         
         {/* Transparent cuts mask for letters */}
@@ -36,7 +36,7 @@ export default function LogoIcon({ className = "h-12 w-auto", light = false }) {
         </mask>
       </defs>
 
-      {/* 1. Maroon Swoosh Loop */}
+      {/* 1. Golden Swoosh Loop */}
       <path 
         d="M 22 55 C 10 38 65 6 120 7 C 160 8 182 18 182 28 C 182 36 158 46 112 50 C 70 54 38 52 38 48 C 38 46 42 46 44 48 C 44 50 72 52 110 48 C 152 44 176 34 176 28 C 176 20 156 12 120 11 C 70 10 20 38 28 53 Z" 
         fill="url(#swooshGrad)" 
@@ -60,21 +60,21 @@ export default function LogoIcon({ className = "h-12 w-auto", light = false }) {
         <path d="M 148,15 H 155.5 L 166,46 H 157.5 L 155.8,40.5 H 147.8 L 146.1,46 H 138 Z M 153.8,34.5 L 151.8,25 L 149.8,34.5 Z" />
       </g>
 
-      {/* 3. Tile Machine in Maroon */}
+      {/* 3. Tile Machine in Gold */}
       <text 
         x="62" 
         y="62" 
         fontFamily="'Arial Black', sans-serif" 
         fontWeight="900" 
         fontSize="17.5" 
-        fill="#c7768c" 
+        fill="#f5cf5b"
         letterSpacing="-0.2"
       >
         Tile Machine
       </text>
 
       {/* 4. Gear Icons (overlapping, bottom left) */}
-      <g fill="#c7768c" transform="translate(14, 61) scale(0.65)">
+      <g fill="#f5cf5b" transform="translate(14, 61) scale(0.65)">
         <path d="M 10 5 A 5 5 0 1 0 10 15 A 5 5 0 1 0 10 5 Z M 10 8 A 2 2 0 1 1 10 12 A 2 2 0 1 1 10 8 Z" />
         <rect x="9" y="3" width="2" height="3" rx="0.5" />
         <rect x="9" y="14" width="2" height="3" rx="0.5" />
@@ -85,7 +85,7 @@ export default function LogoIcon({ className = "h-12 w-auto", light = false }) {
         <rect x="13" y="4.5" width="2.5" height="2.5" rx="0.5" transform="rotate(-45 14.25 5.75)" />
         <rect x="4.5" y="13" width="2.5" height="2.5" rx="0.5" transform="rotate(-45 5.75 14.25)" />
       </g>
-      <g fill="#8f374f" transform="translate(23, 64) scale(0.48)">
+      <g fill="#b38f2d" transform="translate(23, 64) scale(0.48)">
         <path d="M 10 5 A 5 5 0 1 0 10 15 A 5 5 0 1 0 10 5 Z M 10 8 A 2 2 0 1 1 10 12 A 2 2 0 1 1 10 8 Z" />
         <rect x="9" y="3" width="2" height="3" rx="0.5" />
         <rect x="9" y="14" width="2" height="3" rx="0.5" />

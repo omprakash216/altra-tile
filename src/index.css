@@ -4,29 +4,29 @@
   --font-sans: "Arial", sans-serif;
   --font-display: "Arial", sans-serif;
 
-  --color-gold-50: #fbf4f6;
-  --color-gold-100: #f7e6eb;
-  --color-gold-200: #ecd0da;
-  --color-gold-300: #dda8b6;
-  --color-gold-400: #c7768c;
-  --color-gold-500: #a6425f; /* Maroon Accent */
-  --color-gold-600: #8f374f;
-  --color-gold-700: #752d41;
-  --color-gold-800: #5c2233;
-  --color-gold-900: #421827;
-  --color-gold-950: #250a12;
+  --color-gold-50: #fff9e8;
+  --color-gold-100: #fff1c2;
+  --color-gold-200: #ffe48a;
+  --color-gold-300: #ffd75b;
+  --color-gold-400: #e4bf42;
+  --color-gold-500: #d4af37; /* Golden Accent */
+  --color-gold-600: #b38f2d;
+  --color-gold-700: #8e6f22;
+  --color-gold-800: #6d5418;
+  --color-gold-900: #4b390f;
+  --color-gold-950: #2d2208;
 
-  --color-orange-50: #fbf4f6;
-  --color-orange-100: #f7e6eb;
-  --color-orange-200: #ecd0da;
-  --color-orange-300: #dda8b6;
-  --color-orange-400: #c7768c;
-  --color-orange-500: #a6425f;
-  --color-orange-600: #8f374f;
-  --color-orange-700: #752d41;
-  --color-orange-800: #5c2233;
-  --color-orange-900: #421827;
-  --color-orange-950: #250a12;
+  --color-orange-50: #fff9e8;
+  --color-orange-100: #fff1c2;
+  --color-orange-200: #ffe48a;
+  --color-orange-300: #ffd75b;
+  --color-orange-400: #e4bf42;
+  --color-orange-500: #d4af37;
+  --color-orange-600: #b38f2d;
+  --color-orange-700: #8e6f22;
+  --color-orange-800: #6d5418;
+  --color-orange-900: #4b390f;
+  --color-orange-950: #2d2208;
 
   --color-navy-50: #f4f6f8;
   --color-navy-100: #e9ecef;
@@ -75,7 +75,7 @@
   }
 
   ::selection {
-    background: #a6425f;
+    background: #d4af37;
     color: #fff;
   }
 }
@@ -163,7 +163,7 @@
     left: -50%;
     width: 200%;
     height: 200%;
-    background: conic-gradient(from 0deg, transparent 0%, transparent 60%, rgba(166, 66, 95, 0.1) 80%, rgba(166, 66, 95, 0.8) 100%);
+    background: conic-gradient(from 0deg, transparent 0%, transparent 60%, rgba(212, 175, 55, 0.1) 80%, rgba(212, 175, 55, 0.8) 100%);
     animation: radar-spin 4s linear infinite;
     z-index: 0;
   }
@@ -249,7 +249,7 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: #a6425f;
+    background-color: #d4af37;
     opacity: 1;
     filter: blur(20px);
     animation: blob-bounce 5s infinite ease;
@@ -281,8 +281,8 @@
 
 .map-grid {
   background-image:
-    linear-gradient(rgba(166, 66, 95, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(166, 66, 95, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(212, 175, 55, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 175, 55, 0.05) 1px, transparent 1px);
   background-size: 38px 38px;
 }
 

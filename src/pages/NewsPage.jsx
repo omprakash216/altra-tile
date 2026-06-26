@@ -24,7 +24,7 @@ As block production scales up to multiple shifts, having real-time Siemens PLC a
     <div className="bg-slate-50 pt-[116px]">
       {/* Header */}
       <section className="relative overflow-hidden bg-[#071321] py-20 text-white sm:py-24">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(166,66,95,0.15),transparent)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(212,175,55,0.15),transparent)]" />
         <div className="container-shell relative z-10">
           <p className="eyebrow">Factory Updates</p>
           <h1 className="mt-4 font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
@@ -41,7 +41,7 @@ As block production scales up to multiple shifts, having real-time Siemens PLC a
         <div className="container-shell">
           {loading ? (
             <div className="flex justify-center py-16">
-              <div style={{ width: 40, height: 40, border: '3px solid #e2e8f0', borderTop: '3px solid #a6425f', borderRadius: '50%', animation: 'spin 0.8s linear infinite' }} />
+              <div style={{ width: 40, height: 40, border: '3px solid #e2e8f0', borderTop: '3px solid #d4af37', borderRadius: '50%', animation: 'spin 0.8s linear infinite' }} />
               <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
             </div>
           ) : (

@@ -118,7 +118,7 @@ export default function AboutPage() {
       <section className="relative overflow-hidden bg-[#071321] py-20 text-white sm:py-24 lg:py-28">
         {/* Subtle grid backdrop */}
         <div className="absolute inset-0 map-grid opacity-[0.07] pointer-events-none" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(166,66,95,0.12),transparent)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(212,175,55,0.12),transparent)]" />
         
         <div className="container-shell relative z-10">
           <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">

@@ -74,7 +74,7 @@ export default function Home() {
         <div className="text-center">
           <div style={{
             width: 48, height: 48, border: '3px solid #1e293b',
-            borderTop: '3px solid #a6425f', borderRadius: '50%',
+            borderTop: '3px solid #d4af37', borderRadius: '50%',
             animation: 'spin 0.8s linear infinite', margin: '0 auto 16px'
           }} />
           <p className="text-slate-400 text-sm font-semibold">Loading ULTRA Tile Machine...</p>

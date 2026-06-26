@@ -29,7 +29,7 @@ export default function ContactPage() {
     <div className="bg-slate-50 pt-[116px]">
       {/* Header Banner */}
       <section className="relative overflow-hidden bg-[#071321] py-20 text-white sm:py-24">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(166,66,95,0.15),transparent)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(212,175,55,0.15),transparent)]" />
         <div className="container-shell relative z-10">
           <p className="eyebrow">Connect With Us</p>
           <h1 className="mt-4 font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">

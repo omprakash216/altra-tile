@@ -101,7 +101,7 @@ admin_head('Inquiries');
     <thead><tr><th>Status</th><th>Name</th><th>Email</th><th>Product</th><th>Message</th><th>Date</th><th>Actions</th></tr></thead>
     <tbody>
     <?php foreach ($inquiries as $inq): ?>
-      <tr style="<?= !$inq['is_read'] ? 'background:rgba(166,66,95,0.04)' : '' ?>">
+      <tr style="<?= !$inq['is_read'] ? 'background:rgba(212,175,55,0.04)' : '' ?>">
         <td>
           <?php if (!$inq['is_read']): ?>
             <span class="td-badge badge-inactive">New</span>

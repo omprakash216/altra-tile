@@ -115,7 +115,7 @@ export function Hero({ heroData }) {
               draggable="false"
             />
             <div className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(3,7,18,0.80)_0%,rgba(3,7,18,0.58)_34%,rgba(3,7,18,0.16)_68%,rgba(3,7,18,0.08)_100%)]" />
-            <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_70%_50%,rgba(255,255,255,0.06),transparent_20%),radial-gradient(circle_at_80%_20%,rgba(166,66,95,0.12),transparent_18%)]" />
+            <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_70%_50%,rgba(255,255,255,0.06),transparent_20%),radial-gradient(circle_at_80%_20%,rgba(212,175,55,0.12),transparent_18%)]" />
             <div className="absolute inset-0 z-10 flex items-center justify-center">
               <img
                 className="h-full w-full select-none object-cover object-center"
@@ -127,7 +127,7 @@ export function Hero({ heroData }) {
             </div>
           </div>
         ))}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(166,66,95,0.12),transparent_30%),radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.05),transparent_24%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(212,175,55,0.12),transparent_30%),radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.05),transparent_24%)]" />
       </div>
 
       {slides.length > 1 && (
@@ -261,7 +261,7 @@ export function Products({ products = [], filters = [] }) {
           {visibleProducts.map((p) => (
             <article
               key={p.id}
-              className="group relative flex flex-col justify-between overflow-hidden rounded-[2rem] bg-white p-3 border border-slate-200 shadow-[0_4px_25px_rgba(0,0,0,0.02)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(166,66,95,0.08)] hover:border-gold-500/40"
+              className="group relative flex flex-col justify-between overflow-hidden rounded-[2rem] bg-white p-3 border border-slate-200 shadow-[0_4px_25px_rgba(0,0,0,0.02)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(212,175,55,0.08)] hover:border-gold-500/40"
             >
               <div className="relative aspect-[1.3] overflow-hidden rounded-[1.6rem] bg-slate-50">
                 {p.badge && (
@@ -709,7 +709,7 @@ export function WhyChooseUs({ products = [] }) {
                 style={{ width: `${100 / itemsPerView}%` }}
               >
                 <article
-                  className="group relative flex flex-col justify-between overflow-hidden rounded-[2.5rem] bg-white p-4 border border-slate-200 shadow-[0_4px_25px_rgba(0,0,0,0.02)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_45px_rgba(166,66,95,0.08)] hover:border-gold-500/40 h-full"
+                  className="group relative flex flex-col justify-between overflow-hidden rounded-[2.5rem] bg-white p-4 border border-slate-200 shadow-[0_4px_25px_rgba(0,0,0,0.02)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_45px_rgba(212,175,55,0.08)] hover:border-gold-500/40 h-full"
                 >
                   <div className="relative aspect-[1.3] overflow-hidden rounded-[2rem] bg-slate-50">
                     <span className="absolute left-4 top-4 z-10 rounded-full bg-navy-950/90 text-white border border-white/10 backdrop-blur px-3.5 py-1.5 text-[9px] font-black uppercase tracking-wider shadow-md">
@@ -917,7 +917,7 @@ function AnimatedNetworkHub() {
           <div key={i} className="absolute" style={{ top: node.top, left: node.left }}>
             <div className="relative">
               <div className="absolute -inset-2 rounded-full bg-gold-500 pulse-ring" style={{ animationDelay: node.delay }} />
-              <div className="relative h-2 w-2 rounded-full bg-gold-500 shadow-[0_0_15px_rgba(166,66,95,0.8)]" />
+              <div className="relative h-2 w-2 rounded-full bg-gold-500 shadow-[0_0_15px_rgba(212,175,55,0.8)]" />
             </div>
           </div>
         ))}
@@ -957,7 +957,7 @@ export function GlobalService({ services = [] }) {
             {services.map(({ title, text, icon: iconName }) => {
               const Icon = resolveIcon(iconName) || Settings2;
               return (
-                <article className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-6 transition-all duration-500 hover:-translate-y-2 hover:border-gold-500/40 hover:bg-white/[0.04] hover:shadow-[0_0_40px_rgba(166,66,95,0.1)]" key={title}>
+                <article className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-6 transition-all duration-500 hover:-translate-y-2 hover:border-gold-500/40 hover:bg-white/[0.04] hover:shadow-[0_0_40px_rgba(212,175,55,0.1)]" key={title}>
                   <div className="absolute right-0 top-0 h-24 w-24 -translate-y-1/2 translate-x-1/2 rounded-full bg-gold-500/20 blur-[30px] transition-opacity opacity-0 group-hover:opacity-100" />
                   <div className="relative z-10 grid h-12 w-12 place-items-center rounded-2xl bg-white/5 text-gold-500 transition-transform duration-500 group-hover:scale-110 group-hover:bg-gold-500 group-hover:text-navy-950">
                     <Icon size={24} />

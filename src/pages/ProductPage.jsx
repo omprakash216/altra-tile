@@ -50,7 +50,7 @@ export default function ProductPage() {
       <div className="flex min-h-screen items-center justify-center bg-slate-950">
         <div style={{
           width: 44, height: 44, border: '3px solid #1e293b',
-          borderTop: '3px solid #a6425f', borderRadius: '50%',
+          borderTop: '3px solid #d4af37', borderRadius: '50%',
           animation: 'spin 0.8s linear infinite'
         }} />
         <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
