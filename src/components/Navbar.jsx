@@ -182,7 +182,7 @@ export default function Navbar() {
                         <img
                           src={category.image}
                           alt=""
-                          className="h-10 w-12 rounded-lg object-contain bg-white p-1 border border-white/10 shrink-0"
+                          className="h-10 w-12 rounded-lg object-cover bg-white border border-white/10 shrink-0"
                         />
                         <div className="overflow-hidden">
                           <p className="text-xs font-bold leading-snug truncate">{category.name}</p>
@@ -223,7 +223,7 @@ export default function Navbar() {
                                 <img
                                   src={subItem.image}
                                   alt=""
-                                  className="h-12 w-16 rounded-lg object-contain bg-white p-1 border border-white/10 shrink-0"
+                                  className="h-12 w-16 rounded-lg object-cover bg-white border border-white/10 shrink-0"
                                 />
                                 <div className="overflow-hidden flex flex-col justify-center">
                                   <h4 className="text-xs font-bold text-slate-200 group-hover:text-orange-400 transition leading-tight truncate">
@@ -316,7 +316,7 @@ export default function Navbar() {
                         <img
                           src={category.image}
                           alt=""
-                          className="h-8 w-10 rounded object-contain bg-white p-0.5 border border-white/10"
+                          className="h-8 w-10 rounded object-cover bg-white border border-white/10"
                         />
                         <span>{category.name}</span>
                       </Link>
@@ -341,7 +341,7 @@ export default function Navbar() {
                             <img
                               src={sub.image}
                               alt=""
-                              className="h-6 w-8 rounded object-contain bg-white p-0.5"
+                              className="h-6 w-8 rounded object-cover bg-white"
                             />
                             <span>{sub.name}</span>
                           </Link>

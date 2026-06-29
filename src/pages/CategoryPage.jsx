@@ -108,18 +108,19 @@ export default function CategoryPage() {
           </div>
           <div className="grid gap-10 md:grid-cols-2">
             {(categoryObj.subItems || []).map((item) => (
-              <div key={item.id} className="group flex flex-col overflow-hidden rounded-[2.5rem] bg-white p-3 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-orange-900/5 border border-slate-200/60">
-                <div className="relative aspect-[1.3] overflow-hidden rounded-[2rem] bg-slate-100">
+              <div key={item.id} className="group flex flex-col overflow-hidden rounded-[2.5rem] bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-orange-900/5 border border-slate-200/60">
+                <div className="relative aspect-[1.22] overflow-hidden bg-slate-100">
                   <CardImage
                     src={item.image}
                     alt={item.name}
                     className="h-full w-full"
                     tone="light"
                     padding="p-0"
+                    imageClassName="object-center transition-transform duration-500 group-hover:scale-[1.03]"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 </div>
-                <div className="flex flex-1 flex-col px-5 pb-5 pt-6">
+                <div className="flex flex-1 flex-col px-7 pb-7 pt-6">
                   <h3 className="font-display text-2xl font-extrabold text-slate-900 transition-colors group-hover:text-orange-600">
                     {item.name}
                   </h3>

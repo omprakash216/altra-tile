@@ -84,6 +84,7 @@ export default function ProjectsPage() {
                           className="h-full w-full"
                           tone="light"
                           padding="p-0"
+                          imageClassName="object-center transition-transform duration-500 group-hover:scale-[1.04]"
                         />
                         <span className="absolute left-4 top-4 rounded-full bg-slate-950/85 px-3.5 py-1.5 text-[10px] font-extrabold uppercase tracking-widest text-white backdrop-blur">
                           {proj.label}

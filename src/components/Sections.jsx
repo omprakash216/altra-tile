@@ -261,9 +261,9 @@ export function Products({ products = [], filters = [] }) {
           {visibleProducts.map((p) => (
             <article
               key={p.id}
-              className="group relative flex flex-col justify-between overflow-hidden rounded-[2rem] bg-white p-3 border border-slate-200 shadow-[0_4px_25px_rgba(0,0,0,0.02)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(212,175,55,0.08)] hover:border-gold-500/40"
+              className="group relative flex min-h-[385px] flex-col overflow-hidden rounded-[2rem] bg-white border border-slate-200 shadow-[0_4px_25px_rgba(0,0,0,0.02)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(212,175,55,0.08)] hover:border-gold-500/40"
             >
-              <div className="relative aspect-[1.3] overflow-hidden rounded-[1.6rem] bg-slate-50">
+              <div className="relative aspect-[1.18] overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-100">
                 {p.badge && (
                   <span className="absolute left-4 top-4 z-10 rounded-full bg-gold-500 px-3.5 py-1.5 text-[9px] font-black uppercase tracking-wider text-navy-950 shadow-md">
                     {p.badge}
@@ -275,10 +275,11 @@ export function Products({ products = [], filters = [] }) {
                   className="h-full w-full"
                   tone="light"
                   padding="p-0"
+                  imageClassName="background-image object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
                 />
               </div>
 
-              <div className="flex flex-1 flex-col px-4 pb-4 pt-5 text-left">
+              <div className="flex flex-1 flex-col px-6 pb-7 pt-6 text-left">
                 <h3 className="font-display text-lg font-extrabold text-navy-950 transition-colors group-hover:text-gold-600">
                   {p.title}
                 </h3>
@@ -286,7 +287,7 @@ export function Products({ products = [], filters = [] }) {
                   {p.subtitle || 'Production Machine'}
                 </p>
 
-                <p className="mt-4 text-xs text-slate-500 leading-relaxed line-clamp-2">
+                <p className="mt-4 min-h-[3.25rem] text-xs text-slate-500 leading-relaxed line-clamp-3">
                   {p.description}
                 </p>
 
@@ -301,7 +302,7 @@ export function Products({ products = [], filters = [] }) {
                 )}
 
                 {/* View Details Link */}
-                <div className="mt-5 border-t border-slate-100 pt-4">
+                <div className="mt-auto border-t border-slate-100 pt-5">
                   <Link
                     to={`/product/${p.id}`}
                     className="inline-flex items-center gap-1.5 text-xs font-bold text-navy-950 hover:text-gold-500 transition-colors"
@@ -364,7 +365,7 @@ export function HotSales({ hotSales = [], strengths = [], products = [] }) {
                 className="absolute inset-0 h-full w-full"
                 tone="dark"
                 padding="p-0"
-                imageClassName="object-contain"
+                imageClassName="background-image object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/30 to-transparent opacity-90" />
 
@@ -419,6 +420,7 @@ export function HotSales({ hotSales = [], strengths = [], products = [] }) {
                   className="h-full w-full"
                   tone="dark"
                   padding="p-0"
+                  imageClassName="object-cover object-center transition-transform duration-500 group-hover:scale-[1.04]"
                 />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
 
@@ -709,9 +711,9 @@ export function WhyChooseUs({ products = [] }) {
                 style={{ width: `${100 / itemsPerView}%` }}
               >
                 <article
-                  className="group relative flex flex-col justify-between overflow-hidden rounded-[2.5rem] bg-white p-4 border border-slate-200 shadow-[0_4px_25px_rgba(0,0,0,0.02)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_45px_rgba(212,175,55,0.08)] hover:border-gold-500/40 h-full"
+                  className="group relative flex h-full flex-col overflow-hidden rounded-[2.5rem] bg-white border border-slate-200 shadow-[0_4px_25px_rgba(0,0,0,0.02)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_45px_rgba(212,175,55,0.08)] hover:border-gold-500/40"
                 >
-                  <div className="relative aspect-[1.3] overflow-hidden rounded-[2rem] bg-slate-50">
+                  <div className="relative aspect-[1.18] overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-100">
                     <span className="absolute left-4 top-4 z-10 rounded-full bg-navy-950/90 text-white border border-white/10 backdrop-blur px-3.5 py-1.5 text-[9px] font-black uppercase tracking-wider shadow-md">
                       {p.badge || "Trending"}
                     </span>
@@ -721,10 +723,11 @@ export function WhyChooseUs({ products = [] }) {
                       className="h-full w-full"
                       tone="light"
                       padding="p-0"
+                      imageClassName="background-image object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
                     />
                   </div>
 
-                  <div className="flex flex-1 flex-col px-4 pb-4 pt-5">
+                  <div className="flex flex-1 flex-col px-6 pb-7 pt-6">
                     <h3 className="font-display text-lg font-extrabold text-navy-950 transition-colors group-hover:text-gold-600">
                       {p.title}
                     </h3>
@@ -747,7 +750,7 @@ export function WhyChooseUs({ products = [] }) {
                     )}
 
                     {/* View Details Link */}
-                    <div className="mt-5 border-t border-slate-100 pt-4 flex items-center justify-between">
+                    <div className="mt-auto border-t border-slate-100 pt-5 flex items-center justify-between">
                       <Link
                         to={`/product/${p.id}`}
                         className="inline-flex items-center gap-1.5 text-xs font-bold text-navy-950 hover:text-gold-500 transition-colors"
@@ -887,7 +890,8 @@ export function Projects({ projects = [] }) {
                 alt={project.title}
                 className="h-full w-full"
                 tone="light"
-                padding="p-3 sm:p-4"
+                padding="p-0"
+                imageClassName="background-image object-cover object-center transition-transform duration-500 group-hover:scale-[1.04]"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/10 to-transparent" />

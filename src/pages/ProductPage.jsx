@@ -105,6 +105,7 @@ export default function ProductPage() {
               className="aspect-[4/3] w-full"
               tone="light"
               padding="p-0"
+              imageClassName="object-center"
             />
             <div className="bg-[#071321] p-6 text-white flex items-center gap-4">
               <Shield className="text-orange-500 shrink-0" size={28} />
@@ -205,7 +206,8 @@ export default function ProductPage() {
                         alt={cleanText(productObj.name)}
                         className="aspect-[16/9] w-full sm:aspect-[18/8]"
                         tone="light"
-                        padding="p-3 sm:p-5"
+                        padding="p-0"
+                        imageClassName="object-center"
                       />
                     </div>
                   </div>
