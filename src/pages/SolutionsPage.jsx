@@ -74,7 +74,7 @@ export default function SolutionsPage() {
                 ? icon
                 : resolveIcon(icon || icon_name || "Factory");
               return (
-              <div key={title} className="flex flex-col rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm transition hover:shadow-lg lg:p-10">
+              <div key={title} className="flex flex-col rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-lg sm:p-8 lg:p-10">
                 <div className="flex items-center justify-between">
                   <span className="grid h-16 w-16 place-items-center rounded-2xl bg-orange-500/10 text-orange-600">
                     <Icon size={32} />
@@ -133,7 +133,7 @@ export default function SolutionsPage() {
           </div>
 
           {/* Stepper Content */}
-          <div className="mx-auto mt-10 max-w-4xl rounded-[2rem] border border-white/10 bg-white/[0.02] p-8 sm:p-12">
+          <div className="mx-auto mt-10 max-w-4xl rounded-[2rem] border border-white/10 bg-white/[0.02] p-6 sm:p-12">
             <div className="grid gap-8 lg:grid-cols-2">
               <div className="flex flex-col justify-center">
                 <span className="text-xs font-bold uppercase tracking-wider text-orange-500">
@@ -180,7 +180,7 @@ export default function SolutionsPage() {
       {/* Inquiry Form */}
       <section className="py-20">
         <div className="container-shell max-w-[800px]">
-          <div className="rounded-[2.5rem] border border-slate-200 bg-white p-8 shadow-sm sm:p-12">
+          <div className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-12 lg:rounded-[2.5rem]">
             <div className="text-center">
               <h2 className="font-display text-2xl font-bold text-slate-950 sm:text-3xl">
                 Get a Quote for Your Custom Plant

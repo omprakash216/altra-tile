@@ -68,40 +68,46 @@ function CountUp({ value }) {
 
 // â”€â”€â”€ Hero â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export function Hero({ heroData }) {
-  const slides = heroData?.slides && heroData.slides.length
-    ? heroData.slides
-    : [
-      assetImage(10),
-      assetImage(11),
-      assetImage(12),
-      assetImage(13),
-      assetImage(14)
-    ];
+  const fallbackSlides = [
+    assetImage(10),
+    assetImage(11),
+    assetImage(12),
+    assetImage(13),
+    assetImage(14)
+  ];
+  const slides = heroData?.slides
+    ?.filter((img) => typeof img === 'string' && img.trim())
+    .map((img) => img.trim()) || [];
+  const displaySlides = slides.length ? slides : fallbackSlides;
 
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    if (slides.length <= 1) return;
+    setActiveIndex(0);
+  }, [displaySlides.length]);
+
+  useEffect(() => {
+    if (displaySlides.length <= 1) return;
     const timer = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % slides.length);
+      setActiveIndex((prev) => (prev + 1) % displaySlides.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, [slides.length]);
+  }, [displaySlides.length]);
 
   const handleNext = (e) => {
     if (e) e.stopPropagation();
-    setActiveIndex((prev) => (prev + 1) % slides.length);
+    setActiveIndex((prev) => (prev + 1) % displaySlides.length);
   };
 
   const handlePrev = (e) => {
     if (e) e.stopPropagation();
-    setActiveIndex((prev) => (prev - 1 + slides.length) % slides.length);
+    setActiveIndex((prev) => (prev - 1 + displaySlides.length) % displaySlides.length);
   };
 
   return (
-    <section id="home" className="relative isolate min-h-[calc(100svh+32px)] lg:min-h-[calc(100svh+48px)] overflow-hidden bg-[#030712] text-white">
-      <div className="absolute inset-x-0 top-[110px] lg:top-[150px] bottom-0">
-        {slides.map((img, index) => (
+    <section id="home" className="relative isolate min-h-[430px] overflow-hidden bg-[#030712] text-white sm:min-h-[620px] lg:min-h-[100svh]">
+      <div className="absolute inset-x-0 top-[82px] bottom-0 sm:top-24 lg:top-[150px]">
+        {displaySlides.map((img, index) => (
           <div
             key={`${img}-${index}`}
             className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === activeIndex ? 'opacity-100' : 'opacity-0'}`}
@@ -114,11 +120,11 @@ export function Hero({ heroData }) {
               loading={index === 0 ? 'eager' : 'lazy'}
               draggable="false"
             />
-            <div className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(3,7,18,0.80)_0%,rgba(3,7,18,0.58)_34%,rgba(3,7,18,0.16)_68%,rgba(3,7,18,0.08)_100%)]" />
-            <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_70%_50%,rgba(255,255,255,0.06),transparent_20%),radial-gradient(circle_at_80%_20%,rgba(212,175,55,0.12),transparent_18%)]" />
-            <div className="absolute inset-0 z-10 flex items-center justify-center">
+            <div className="absolute inset-0 z-0 bg-[linear-gradient(180deg,rgba(3,7,18,0.18)_0%,rgba(3,7,18,0.02)_36%,rgba(3,7,18,0.36)_100%)] lg:bg-[linear-gradient(90deg,rgba(3,7,18,0.80)_0%,rgba(3,7,18,0.58)_34%,rgba(3,7,18,0.16)_68%,rgba(3,7,18,0.08)_100%)]" />
+            <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.05),transparent_32%)] lg:bg-[radial-gradient(circle_at_70%_50%,rgba(255,255,255,0.06),transparent_20%),radial-gradient(circle_at_80%_20%,rgba(212,175,55,0.12),transparent_18%)]" />
+            <div className="absolute inset-0 z-10 flex items-center justify-center px-0 pb-16 pt-0 sm:pb-20 lg:p-0">
               <img
-                className="h-full w-full select-none object-cover object-center"
+                className="max-h-full w-full select-none object-contain object-center lg:h-full lg:max-h-none lg:object-cover"
                 src={img}
                 alt={`Hero slide ${index + 1}`}
                 loading={index === 0 ? 'eager' : 'lazy'}
@@ -130,16 +136,16 @@ export function Hero({ heroData }) {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(212,175,55,0.12),transparent_30%),radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.05),transparent_24%)]" />
       </div>
 
-      {slides.length > 1 && (
-        <div className="absolute inset-x-0 bottom-6 z-20">
-          <div className="container-shell flex items-center justify-between gap-4">
-            <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-black/30 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.25em] text-white/80 backdrop-blur-md">
+      {displaySlides.length > 1 && (
+        <div className="absolute inset-x-0 bottom-4 z-20 sm:bottom-6">
+          <div className="container-shell flex items-center justify-center gap-3 sm:justify-between sm:gap-4">
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/45 px-3 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-white/80 backdrop-blur-md sm:gap-3 sm:px-4 sm:tracking-[0.25em]">
               <span>Slide</span>
               <span className="text-gold-500">
-                {String(activeIndex + 1).padStart(2, '0')} / {String(slides.length).padStart(2, '0')}
+                {String(activeIndex + 1).padStart(2, '0')} / {String(displaySlides.length).padStart(2, '0')}
               </span>
             </div>
-            <div className="ml-auto flex gap-3">
+            <div className="hidden gap-3 sm:ml-auto sm:flex">
               <button
                 type="button"
                 onClick={handlePrev}
@@ -177,10 +183,10 @@ export function Stats({ stats = [] }) {
   const statIcons = [Rocket, Trophy, MessageSquareHeart, Puzzle];
 
   return (
-    <section className="bg-[#fbf6ef] py-16 sm:py-20 lg:py-24">
+    <section className="bg-[#fbf6ef] py-14 sm:py-20 lg:py-24">
       <div className="container-shell">
-        <div className="mx-auto max-w-[1380px] rounded-[2rem] border border-[#e7dbcf] bg-[#f7efe5] px-6 py-8 shadow-[0_18px_48px_rgba(62,24,35,0.08)] sm:px-8 lg:px-12 lg:py-10">
-          <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mx-auto max-w-[1380px] rounded-3xl border border-[#e7dbcf] bg-[#f7efe5] px-5 py-7 shadow-[0_18px_48px_rgba(62,24,35,0.08)] sm:px-8 lg:px-12 lg:py-10">
+          <div className="grid gap-7 sm:grid-cols-2 xl:grid-cols-4">
             {displayStats.map((stat, idx) => {
               const Icon = statIcons[idx % statIcons.length];
               return (
@@ -225,7 +231,7 @@ export function Products({ products = [], filters = [] }) {
   }, [filter, products]);
 
   return (
-    <section id="products" className="py-24 bg-white scroll-mt-20">
+    <section id="products" className="py-16 bg-white scroll-mt-20 sm:py-20 lg:py-24">
       <div className="container-shell">
         <div className="text-center max-w-3xl mx-auto mb-14">
           <p className="text-[11px] font-extrabold uppercase tracking-[0.25em] text-gold-600 mb-3 flex items-center justify-center gap-2">
@@ -337,7 +343,7 @@ export function HotSales({ hotSales = [], strengths = [], products = [] }) {
   ];
 
   return (
-    <section className="py-24 bg-navy-950 text-white relative overflow-hidden">
+    <section className="py-16 bg-navy-950 text-white relative overflow-hidden sm:py-20 lg:py-24">
       {/* Background gradients */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold-500/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute -bottom-20 -left-20 w-[400px] h-[400px] bg-navy-800/20 rounded-full blur-[100px] pointer-events-none" />
@@ -358,7 +364,7 @@ export function HotSales({ hotSales = [], strengths = [], products = [] }) {
           {/* Left Block: Highlight Video Showcase */}
           <div className="flex flex-col h-full">
             {/* Video Showcase Card */}
-            <div className="group relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-navy-900 shadow-2xl flex-1 flex flex-col min-h-[400px]">
+            <div className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-navy-900 shadow-2xl flex min-h-[360px] flex-1 flex-col sm:min-h-[400px]">
               <CardImage
                 src={highlight.image}
                 alt={highlight.name}
@@ -465,7 +471,7 @@ export function Solutions({ solutions: customSolutions = [] }) {
   }[steps.length] || 'lg:grid-cols-4';
 
   return (
-    <section id="solutions" className="py-24 bg-slate-50 scroll-mt-20 border-y border-slate-200">
+    <section id="solutions" className="py-16 bg-slate-50 scroll-mt-20 border-y border-slate-200 sm:py-20 lg:py-24">
       <div className="container-shell text-center">
         <div className="max-w-3xl mx-auto mb-20">
           <p className="text-[11px] font-extrabold uppercase tracking-[0.25em] text-gold-600 mb-4 flex items-center justify-center gap-2">
@@ -532,7 +538,7 @@ export function About({ aboutData }) {
   ];
 
   return (
-    <section id="about" className="py-24 bg-white scroll-mt-20 text-left">
+    <section id="about" className="py-16 bg-white scroll-mt-20 text-left sm:py-20 lg:py-24">
       <div className="container-shell grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
 
         {/* Left Image & Overlay Badge */}
@@ -654,7 +660,7 @@ export function WhyChooseUs({ products = [] }) {
   };
 
   return (
-    <section className="py-24 bg-[#faf8f5] border-y border-slate-100 relative overflow-hidden">
+    <section className="py-16 bg-[#faf8f5] border-y border-slate-100 relative overflow-hidden sm:py-20 lg:py-24">
       {/* Map Grid Backdrop Decoration */}
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
         <div className="absolute inset-0 map-grid" />
@@ -707,7 +713,7 @@ export function WhyChooseUs({ products = [] }) {
             {trending.map((p) => (
               <div 
                 key={p.id} 
-                className="shrink-0 px-4 text-left"
+                className="shrink-0 px-2 text-left sm:px-4"
                 style={{ width: `${100 / itemsPerView}%` }}
               >
                 <article
@@ -799,7 +805,7 @@ export function Testimonials({ testimonials: customTestimonials = [] }) {
   ];
 
   return (
-    <section className="py-24 bg-white text-center">
+    <section className="py-16 bg-white text-center sm:py-20 lg:py-24">
       <div className="container-shell">
         <div className="max-w-3xl mx-auto mb-16">
           <p className="text-[11px] font-extrabold uppercase tracking-[0.25em] text-gold-600 mb-3 flex items-center justify-center gap-2">
@@ -834,7 +840,7 @@ export function Testimonials({ testimonials: customTestimonials = [] }) {
             {[...list, ...list, ...list].map((item, idx) => (
               <div
                 key={idx}
-                className="w-[300px] sm:w-[420px] shrink-0 px-4"
+                className="w-[min(300px,86vw)] shrink-0 px-3 sm:w-[420px] sm:px-4"
               >
                 <div className="flex h-full flex-col justify-between bg-[#faf8f5]/60 rounded-3xl p-8 border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] text-left transition duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-[#f3eee7]/60 cursor-default">
                   <div>
@@ -1037,7 +1043,7 @@ export function Contact({ contactInfo, products = [] }) {
   };
 
   return (
-    <section id="contact" className="py-24 bg-navy-900 text-white scroll-mt-20">
+    <section id="contact" className="py-16 bg-navy-900 text-white scroll-mt-20 sm:py-20 lg:py-24">
       <div className="container-shell grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20 items-center">
 
         {/* Left Side Details */}
@@ -1086,7 +1092,7 @@ export function Contact({ contactInfo, products = [] }) {
         </div>
 
         {/* Right Side Form Card */}
-        <div className="bg-white rounded-[2.5rem] border border-slate-100 shadow-2xl p-8 sm:p-10 text-slate-900 text-left">
+        <div className="rounded-[2rem] border border-slate-100 bg-white p-6 text-left text-slate-900 shadow-2xl sm:p-10 lg:rounded-[2.5rem]">
           <h3 className="font-display text-xl font-extrabold text-navy-950">
             Get a Free Consultation
           </h3>

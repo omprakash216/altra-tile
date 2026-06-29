@@ -45,7 +45,7 @@ export default function ContactPage() {
       <section className="py-20">
         <div className="container-shell grid gap-12 lg:grid-cols-[.85fr_1.15fr]">
           {/* Info Side */}
-          <div className="rounded-[2.5rem] bg-[#0a1727] p-8 text-white sm:p-12">
+          <div className="rounded-[2rem] bg-[#0a1727] p-6 text-white sm:p-12 lg:rounded-[2.5rem]">
             <p className="eyebrow">Contact Details</p>
             <h2 className="mt-4 font-display text-3xl font-bold">
               Let's Discuss Specifications
@@ -58,7 +58,7 @@ export default function ContactPage() {
               <a className="contact-action" href={whatsapp} target="_blank" rel="noopener noreferrer">
                 <MessageCircle size={20} /> WhatsApp Us
               </a>
-              <a className="contact-action" href={`mailto:${email}`}>
+              <a className="contact-action break-all" href={`mailto:${email}`}>
                 <Mail size={20} /> {email}
               </a>
               <a className="contact-action" href={phoneHref}>
@@ -73,7 +73,7 @@ export default function ContactPage() {
           </div>
 
           {/* Form Side */}
-          <form className="rounded-[2.5rem] border border-slate-200 bg-white p-8 shadow-sm sm:p-12" onSubmit={handleSubmit}>
+          <form className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-12 lg:rounded-[2.5rem]" onSubmit={handleSubmit}>
             <h3 className="font-display text-2xl font-bold text-slate-950">
               Send an Inquiry
             </h3>

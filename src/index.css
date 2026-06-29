@@ -59,11 +59,24 @@
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: var(--site-header-height, 82px);
   }
 
   body {
     min-width: 320px;
     margin: 0;
+    overflow-x: hidden;
+  }
+
+  img,
+  svg,
+  video,
+  canvas {
+    max-width: 100%;
+  }
+
+  #root {
+    min-height: 100vh;
   }
 
   a {
@@ -82,7 +95,7 @@
 
 @layer components {
   .container-shell {
-    @apply mx-auto w-full max-w-[1340px] px-5 sm:px-8 lg:px-10;
+    @apply mx-auto w-full max-w-[1340px] px-4 sm:px-6 lg:px-10;
   }
 
   .section-pad {
@@ -94,7 +107,7 @@
   }
 
   .eyebrow {
-    @apply inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.22em] text-gold-500;
+    @apply inline-flex max-w-full items-center gap-3 text-xs font-extrabold uppercase tracking-[0.22em] text-gold-500;
   }
 
   .eyebrow::before {
@@ -134,6 +147,21 @@
 
   .mobile-link {
     @apply flex items-center border-b border-white/10 py-4 text-base font-semibold text-slate-100 transition hover:text-gold-500;
+  }
+
+  .mobile-menu-toggle {
+    display: grid;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    z-index: 10;
+    height: 2.75rem;
+    width: 2.75rem;
+    place-items: center;
+    transform: translateY(-50%);
+    border-radius: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
   }
 
   .filter-tab {
@@ -214,6 +242,14 @@
   .form-field select,
   .form-field textarea {
     @apply w-full resize-none rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 font-medium text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-gold-500 focus:bg-white focus:ring-4 focus:ring-gold-500/10;
+  }
+
+  .scrollbar-hide {
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 
   .stat-card {
@@ -339,10 +375,60 @@
 }
 
 @media (max-width: 639px) {
+  :root {
+    --site-header-height: 82px;
+  }
+
+  .pt-\[116px\] {
+    padding-top: 82px !important;
+  }
+
+  .section-pad {
+    @apply py-16;
+  }
+
+  .button-primary,
+  .button-secondary,
+  .button-dark {
+    @apply min-h-11 px-4 py-2.5 text-xs;
+  }
+
+  .eyebrow {
+    letter-spacing: 0.14em;
+  }
+
   .hero-overlay {
     background:
       linear-gradient(90deg, rgba(4, 9, 17, 0.95), rgba(4, 9, 17, 0.65)),
       linear-gradient(0deg, rgba(4, 9, 17, 0.8), transparent);
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  :root {
+    --site-header-height: 96px;
+  }
+
+  .pt-\[116px\] {
+    padding-top: 96px !important;
+  }
+
+  .mobile-menu-toggle {
+    right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --site-header-height: 150px;
+  }
+
+  .pt-\[116px\] {
+    padding-top: 150px !important;
+  }
+
+  .mobile-menu-toggle {
+    display: none !important;
   }
 }
 

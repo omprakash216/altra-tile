@@ -52,26 +52,31 @@ export default function CategoryPage() {
   return (
     <div className="bg-slate-50 pt-[116px]">
       {/* Category Header Banner */}
-      <section className="relative overflow-hidden bg-[#07111e] py-28 sm:py-36 text-white">
-        <div className="absolute inset-0 opacity-[0.45]">
-          <img src={categoryObj.image} alt={categoryObj.name} className="h-full w-full object-cover object-center" />
+      <section className="relative min-h-[520px] overflow-hidden bg-[#07111e] text-white sm:min-h-[560px] lg:min-h-[620px]">
+        <div className="absolute inset-0 opacity-35">
+          <img src={categoryObj.image} alt="" className="h-full w-full scale-110 object-cover object-center blur-2xl" />
+        </div>
+        <div className="absolute inset-0 flex items-start justify-center px-3 pt-6 sm:items-center sm:px-8 sm:pt-0 lg:justify-end lg:pr-[max(2.5rem,calc((100vw-1340px)/2+2.5rem))]">
+          <img
+            src={categoryObj.image}
+            alt={categoryObj.name}
+            className="max-h-[270px] w-full max-w-[520px] object-contain object-center opacity-80 drop-shadow-2xl sm:max-h-[390px] sm:max-w-[680px] sm:opacity-85 lg:max-h-[520px] lg:w-[54vw] lg:max-w-[820px] lg:object-right"
+          />
         </div>
         {/* Soft, blended dark overlays */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#07111e] via-[#07111e]/50 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#07111e]/80 via-[#07111e]/30 to-transparent" />
-        {/* Glowing gold accent orb */}
-        <div className="absolute top-1/2 right-1/4 w-[400px] h-[400px] bg-gold-500/10 rounded-full blur-[100px] pointer-events-none -translate-y-1/2" />
-        <div className="container-shell relative z-10 flex flex-col justify-end min-h-[300px]">
+        <div className="absolute inset-0 bg-gradient-to-t from-[#07111e] via-[#07111e]/72 to-[#07111e]/18 sm:via-[#07111e]/58 lg:from-[#07111e] lg:via-[#07111e]/38 lg:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#07111e]/95 via-[#07111e]/62 to-[#07111e]/30 lg:via-[#07111e]/36 lg:to-[#07111e]/10" />
+        <div className="container-shell relative z-10 flex min-h-[520px] flex-col justify-end pb-12 pt-10 sm:min-h-[560px] sm:pb-16 lg:min-h-[620px] lg:justify-center lg:pb-0">
           <Link to="/" className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-orange-500 hover:text-orange-400 mb-6 transition-colors">
             <ArrowLeft size={14} /> Back to Portfolio
           </Link>
           <span className="inline-block px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-orange-200 bg-orange-500/20 rounded-full w-fit mb-4 border border-orange-500/20">
             Industrial Series
           </span>
-          <h1 className="font-display text-4xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl">
+          <h1 className="max-w-4xl break-words font-display text-3xl font-extrabold tracking-tight sm:text-5xl lg:text-7xl">
             {categoryObj.name}
           </h1>
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
+          <p className="mt-5 max-w-2xl text-sm leading-7 text-slate-300 sm:mt-6 sm:text-lg sm:leading-8">
             {categoryObj.description}
           </p>
         </div>
@@ -106,7 +111,7 @@ export default function CategoryPage() {
               Browse our precision-engineered models within the {categoryObj.name} category.
             </p>
           </div>
-          <div className="grid gap-10 md:grid-cols-2">
+          <div className="grid gap-8 md:grid-cols-2 lg:gap-10">
             {(categoryObj.subItems || []).map((item) => (
               <div key={item.id} className="group flex flex-col overflow-hidden rounded-[2.5rem] bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-orange-900/5 border border-slate-200/60">
                 <div className="relative aspect-[1.22] overflow-hidden bg-slate-100">
@@ -126,11 +131,11 @@ export default function CategoryPage() {
                   </h3>
                   <p className="mt-4 flex-1 text-sm leading-[1.8] text-slate-500">{item.description}</p>
                   {item.specs && Object.keys(item.specs).length > 0 && (
-                    <div className="mt-6 rounded-[1.5rem] bg-[#f7f5f2] p-5 border border-slate-200/60 shadow-inner">
+                    <div className="mt-6 rounded-[1.5rem] bg-[#f7f5f2] p-4 border border-slate-200/60 shadow-inner sm:p-5">
                       <h4 className="text-[10px] font-bold uppercase tracking-[0.15em] text-slate-400 mb-3 flex items-center gap-2">
                         <span className="w-2 h-2 rounded-full bg-orange-500" /> Technical Overview
                       </h4>
-                      <div className="grid grid-cols-2 gap-x-6 gap-y-3 text-[11px]">
+                      <div className="grid grid-cols-1 gap-x-6 gap-y-3 text-[11px] sm:grid-cols-2">
                         {Object.entries(item.specs).map(([key, val]) => (
                           <div key={key} className="flex flex-col gap-1 border-b border-slate-200/60 pb-2">
                             <span className="text-slate-400 font-semibold uppercase tracking-wider">{key}</span>
@@ -160,13 +165,13 @@ export default function CategoryPage() {
       </section>
 
       {/* Quote Request */}
-      <section className="relative py-24 bg-[#0a0502] text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <img src={assetImage(14)} alt="" className="h-full w-full object-cover" />
+      <section className="relative overflow-hidden bg-[#0a0502] py-16 text-white sm:py-20 lg:py-24">
+        <div className="absolute inset-0 opacity-20">
+          <img src={assetImage(14)} alt="" className="h-full w-full scale-105 object-contain object-center sm:object-cover" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-[#0a0502] to-transparent" />
         <div className="container-shell relative z-10 max-w-[800px]">
-          <div className="rounded-[2.5rem] border border-white/10 bg-white/5 p-8 sm:p-14 backdrop-blur-md shadow-2xl">
+          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-2xl backdrop-blur-md sm:p-10 lg:rounded-[2.5rem] lg:p-14">
             <div className="text-center">
               <span className="inline-block px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-orange-500 bg-orange-500/10 rounded-full mb-4">
                 Documentation

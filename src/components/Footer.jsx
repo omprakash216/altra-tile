@@ -42,16 +42,16 @@ export default function Footer() {
   const address = contactInfo?.address || "Industrial Growth Park, Pune, Maharashtra, India";
 
   return (
-    <footer className="bg-navy-950 text-slate-400 border-t border-white/5">
-      <div className="container-shell grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.25fr_.8fr_1fr_1.1fr]">
-        <div className="text-left">
+    <footer className="border-t border-white/5 bg-navy-950 text-slate-400">
+      <div className="container-shell grid gap-10 py-12 sm:grid-cols-2 sm:py-14 lg:grid-cols-[1.25fr_.8fr_1fr_1.1fr] lg:gap-12 lg:py-16">
+        <div className="text-left sm:col-span-2 lg:col-span-1">
           <Link to="/" className="inline-flex items-center">
-            <img src="/assets/logo.jpeg" alt="ULTRA Tile Machine Logo" className="h-24 w-auto object-contain rounded-lg shadow-sm" />
+            <img src="/assets/logo.jpeg" alt="ULTRA Tile Machine Logo" className="h-20 w-auto rounded-lg object-contain shadow-sm sm:h-24" />
           </Link>
-          <p className="mt-6 max-w-sm text-sm leading-7">
+          <p className="mt-5 max-w-md text-sm leading-7 sm:mt-6 lg:max-w-sm">
             Intelligent block forming machinery and integrated material processing systems configured for plant efficiency and maximum output quality.
           </p>
-          <div className="mt-7 flex gap-3">
+          <div className="mt-7 flex flex-wrap gap-3">
             {socials.map(({ label, icon: Icon }) => (
               <a
                 key={label}
@@ -67,10 +67,10 @@ export default function Footer() {
 
         <div className="text-left">
           <p className="footer-title">Quick Links</p>
-          <ul className="mt-6 space-y-3.5 text-sm text-left">
+          <ul className="mt-5 space-y-3 text-left text-sm sm:mt-6 sm:space-y-3.5">
             {quickLinks.map(([label, href]) => (
               <li key={label}>
-                <Link className="transition hover:text-gold-500" to={href}>{label}</Link>
+                <Link className="inline-flex py-0.5 transition hover:text-gold-500" to={href}>{label}</Link>
               </li>
             ))}
           </ul>
@@ -78,11 +78,11 @@ export default function Footer() {
 
         <div className="text-left">
           <p className="footer-title">Products</p>
-          <ul className="mt-6 space-y-3.5 text-sm text-left">
+          <ul className="mt-5 space-y-3 text-left text-sm sm:mt-6 sm:space-y-3.5">
             {footerProducts.length > 0 ? (
               footerProducts.map((item) => (
                 <li key={item.name}>
-                  <Link className="transition hover:text-gold-500" to={item.href}>{item.name}</Link>
+                  <Link className="inline-flex py-0.5 transition hover:text-gold-500" to={item.href}>{item.name}</Link>
                 </li>
               ))
             ) : (
@@ -96,12 +96,12 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="text-left">
+        <div className="text-left sm:col-span-2 lg:col-span-1">
           <p className="footer-title">Contact Info</p>
-          <ul className="mt-6 space-y-5 text-sm leading-6">
+          <ul className="mt-5 space-y-5 text-sm leading-6 sm:mt-6">
             <li className="flex gap-3">
               <MapPin className="mt-1 shrink-0 text-gold-500" size={17} />
-              {address}
+              <span className="min-w-0 break-words">{address}</span>
             </li>
             <li>
               <a className="flex gap-3 hover:text-gold-500" href={phoneHref}>
@@ -109,7 +109,7 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a className="flex gap-3 hover:text-gold-500" href={`mailto:${email}`}>
+              <a className="flex gap-3 break-all hover:text-gold-500" href={`mailto:${email}`}>
                 <Mail className="shrink-0 text-gold-500" size={17} />
                 {email}
               </a>
@@ -119,9 +119,9 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10 text-left">
-        <div className="container-shell flex flex-col gap-3 py-6 text-xs sm:flex-row sm:items-center sm:justify-between">
+        <div className="container-shell flex flex-col gap-4 py-6 text-xs sm:flex-row sm:items-center sm:justify-between">
           <p>&copy; 2026 ULTRA Tile Machine. All rights reserved.</p>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
             <a href="#" className="hover:text-white">Privacy Policy</a>
             <a href="#" className="hover:text-white">Terms of Use</a>
           </div>

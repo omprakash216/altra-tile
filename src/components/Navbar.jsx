@@ -29,7 +29,7 @@ const links = [
 function Logo() {
   return (
     <Link to="/" className="flex items-center" aria-label="ULTRA TILE MACHINE home">
-      <img src="/assets/logo.jpeg" alt="ULTRA Tile Machine Logo" className="h-[92px] w-auto object-contain rounded-lg shadow-sm" />
+      <img src="/assets/logo.jpeg" alt="ULTRA Tile Machine Logo" className="h-16 w-auto object-contain rounded-lg shadow-sm sm:h-20 lg:h-[92px]" />
     </Link>
   );
 }
@@ -120,7 +120,7 @@ export default function Navbar() {
 
       {/* Main Navbar */}
       <nav className="border-b border-white/10 bg-[#081422]/94 shadow-2xl shadow-slate-950/10 backdrop-blur-xl">
-        <div className="container-shell flex h-[110px] items-center justify-between">
+        <div className="container-shell relative flex h-[82px] items-center justify-between sm:h-24 lg:h-[110px]">
           <Logo />
 
           {/* Desktop Nav Links */}
@@ -157,12 +157,12 @@ export default function Navbar() {
               {/* Mega Dropdown Panel */}
               <div
                 id="products-mega-menu"
-                className={`absolute left-1/2 top-full w-[900px] -translate-x-[45%] overflow-hidden rounded-3xl border border-white/10 bg-slate-950 p-3 shadow-2xl shadow-slate-950/40 transition duration-200 ${megaOpen
+                className={`absolute left-1/2 top-full w-[min(900px,calc(100vw-2rem))] -translate-x-[45%] overflow-hidden rounded-3xl border border-white/10 bg-slate-950 p-3 shadow-2xl shadow-slate-950/40 transition duration-200 ${megaOpen
                     ? "visible translate-y-0 opacity-100"
                     : "invisible -translate-y-2 opacity-0"
                   }`}
               >
-                <div className="grid grid-cols-[380px_1fr] gap-3">
+                <div className="grid grid-cols-[minmax(260px,380px)_1fr] gap-3">
                   {/* Left Column: Categories List */}
                   <div className="flex flex-col gap-1 p-2 border-r border-white/5 max-h-[420px] overflow-y-auto">
                     <p className="px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.15em] text-slate-500 text-left">
@@ -270,7 +270,7 @@ export default function Navbar() {
           {/* Mobile Menu Toggle Button */}
           <button
             type="button"
-            className="grid h-11 w-11 place-items-center rounded-xl border border-white/15 text-white lg:hidden"
+            className="mobile-menu-toggle"
             aria-expanded={mobileOpen}
             aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
             onClick={() => setMobileOpen((open) => !open)}
@@ -282,7 +282,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Panel */}
       <div
-        className={`fixed inset-x-0 top-[77px] h-[calc(100vh-77px)] overflow-y-auto bg-slate-950 px-5 pb-8 pt-5 transition duration-300 lg:hidden ${mobileOpen ? "visible translate-x-0 opacity-100" : "invisible translate-x-full opacity-0"
+        className={`fixed inset-x-0 top-[82px] h-[calc(100dvh-82px)] overflow-y-auto bg-slate-950 px-5 pb-8 pt-5 transition duration-300 sm:top-24 sm:h-[calc(100dvh-96px)] lg:hidden ${mobileOpen ? "visible translate-x-0 opacity-100" : "invisible translate-x-full opacity-0"
           }`}
       >
         <div className="mx-auto max-w-md">

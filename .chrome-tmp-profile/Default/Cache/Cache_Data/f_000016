@@ -1,0 +1,324 @@
+import { Boxes, BrickWall, Building2, Cog, Construction, Factory, Globe2, Headset, Layers3, Microscope, PackageCheck, Settings2, ShieldCheck, Wrench, Cpu, Workflow, Sparkles, ArrowUpRight, TrendingUp, HardHat, MonitorCheck } from "/node_modules/.vite/deps/lucide-react.js?v=b76653a8";
+import { assetImage } from "/src/data/imageAssets.js";
+export const productCategories = [{
+	id: "block-making-machine",
+	name: "Block Making Machine",
+	image: assetImage(1),
+	description: "German-engineered block forming machines optimized for high-compaction blocks and pavers.",
+	features: [
+		"Vibration compaction",
+		"Fast changeovers",
+		"Integrated controls"
+	],
+	subItems: [{
+		id: "zenith-1500",
+		name: "Zenith 1500",
+		image: assetImage(2),
+		description: "Automatic Block Making Machine featuring premium servo vibration table and cloud monitoring controls.",
+		specs: {
+			"Capacity": "1500 Blocks/hr",
+			"Pallet Size": "1100 x 950 mm",
+			"Vibration Force": "80 kN",
+			"Control System": "Siemens PLC"
+		},
+		features: [
+			"Servo drive compaction",
+			"Smart cloud diagnostics",
+			"Automatic pallet feeder"
+		]
+	}, {
+		id: "zenith-940",
+		name: "Zenith 940",
+		image: assetImage(3),
+		description: "High-Performance Mobile Block Machine designed for flexible production of pavers, hollow blocks, and curbstone.",
+		specs: {
+			"Capacity": "940 Blocks/hr",
+			"Pallet Size": "950 x 850 mm",
+			"Vibration Force": "65 kN",
+			"Control System": "Siemens PLC"
+		},
+		features: [
+			"Mobile production",
+			"Flexible mold configurations",
+			"Aggregates distribution loader"
+		]
+	}]
+}];
+export const stats = [
+	{
+		value: "30+",
+		label: "Years of Excellence"
+	},
+	{
+		value: "120+",
+		label: "Countries Served"
+	},
+	{
+		value: "10,000+",
+		label: "Machines Delivered"
+	},
+	{
+		value: "215,000 m²",
+		label: "Manufacturing Area"
+	}
+];
+export const filters = [
+	"ALL MACHINES",
+	"BLOCK MAKING",
+	"PAVERS",
+	"CURBING",
+	"MIXING",
+	"BATCHING"
+];
+// Grid of 8 machines in Section 2
+export const products = [
+	{
+		id: "zenith-1500",
+		title: "Zenith 1500",
+		subtitle: "Automatic Block Making Machine",
+		category: "BLOCK MAKING",
+		image: assetImage(1),
+		capacity: "1500 Blocks/hr",
+		description: "Premium automatic block and paver forming platform with synchronized servo vibration compaction.",
+		features: ["Servo vibration", "Siemens control"],
+		badge: "BEST SELLER"
+	},
+	{
+		id: "zenith-940",
+		title: "Zenith 940",
+		subtitle: "High-Performance Block Machine",
+		category: "BLOCK MAKING",
+		image: assetImage(2),
+		capacity: "940 Blocks/hr",
+		description: "Universal mobile/laying machine for hollow blocks, solid bricks, and curbstones.",
+		features: ["Laying machine", "Fast changeovers"],
+		badge: null
+	},
+	{
+		id: "zenith-1200",
+		title: "Zenith 1200",
+		subtitle: "Multi-Functional Block Machine",
+		category: "PAVERS",
+		image: assetImage(3),
+		capacity: "1200 Blocks/hr",
+		description: "Stationary multilayer machine for pavers, blocks, and various concrete elements.",
+		features: ["Stationary multilayer", "Flexible layout"],
+		badge: null
+	},
+	{
+		id: "zenith-quantum-1200",
+		title: "Zenith Quantum 1200",
+		subtitle: "Fully-Automatic Block Machine",
+		category: "BLOCK MAKING",
+		image: assetImage(4),
+		capacity: "1200 Blocks/hr",
+		description: "Intelligent stationary machine optimized for multi-shift concrete block production.",
+		features: ["Fully automated", "Heavy-duty frame"],
+		badge: null
+	},
+	{
+		id: "zenith-rhino-900",
+		title: "Zenith Rhino 900",
+		subtitle: "Hydraulic Block Making Machine",
+		category: "CURBING",
+		image: assetImage(5),
+		capacity: "900 Blocks/hr",
+		description: "High-compaction hydraulic machine engineered for curbing and specialty elements.",
+		features: ["Hydraulic compaction", "Wear-resistant molds"],
+		badge: null
+	},
+	{
+		id: "zenith-multi-4.0",
+		title: "Zenith Multi 4.0",
+		subtitle: "Multi-Functional Mixing Machine",
+		category: "MIXING",
+		image: assetImage(6),
+		capacity: "Variable Output",
+		description: "Intelligent mixing and feeding system suited for custom concrete formulas.",
+		features: ["Variable speed", "Precision weighing"],
+		badge: null
+	},
+	{
+		id: "zenith-cubie",
+		title: "Zenith Cubie",
+		subtitle: "Compact & Concrete Mixing Machine",
+		category: "MIXING",
+		image: assetImage(7),
+		capacity: "High Output",
+		description: "Compact pan mixer config optimized for quick cycle times and uniform color batches.",
+		features: ["Compact footprint", "High efficiency"],
+		badge: null
+	},
+	{
+		id: "zenith-master-1200",
+		title: "Zenith Master 1200",
+		subtitle: "Vibration-Based Mixing Machine",
+		category: "BATCHING",
+		image: assetImage(8),
+		capacity: "1200 Blocks/hr",
+		description: "Full batching plant unit designed to prepare aggregates for large molding machines.",
+		features: ["Continuous batching", "Siemens control modules"],
+		badge: null
+	}
+];
+// Why Choose Zenith Highlight (Section 3 Left Showcase)
+export const hotSales = [{
+	name: "QS 1000 Supersonic Block Machine",
+	image: assetImage(9),
+	output: "Supersonic forming",
+	text: "Engineered with modern synchronized servo drive compaction and cloud diagnostic integration.",
+	tags: [
+		"Servo vibration",
+		"Smart telemetry",
+		"Rapid mould change"
+	]
+}];
+// Why Choose Zenith Subcomponents (Section 3 Right Grid)
+export const strengths = [
+	{
+		title: "Zenith Pan Mixer",
+		description: "Consistent & High-Output Mixing",
+		icon: Cog
+	},
+	{
+		title: "Zenith Batching Plant",
+		description: "Accurate Batching Every Time",
+		icon: Construction
+	},
+	{
+		title: "Zenith Control System",
+		description: "Smart Control, Smart Production",
+		icon: Cpu
+	},
+	{
+		title: "Zenith Stacker",
+		description: "Fast, Safe & Efficient Stacking",
+		icon: PackageCheck
+	}
+];
+// Complete Path From Material to Finished Product (Section 4 Flow)
+export const solutions = [
+	{
+		title: "Raw Material Handling",
+		text: "Storing and conveying bulk aggregates, sand, and cement.",
+		icon: Factory,
+		step: "01"
+	},
+	{
+		title: "Proportioning & Batching",
+		text: "High-precision aggregate and binder weight dosing.",
+		icon: Construction,
+		step: "02"
+	},
+	{
+		title: "Mixing & Feeding",
+		text: "Intensive homogenizing mixer feeding block machine hopper.",
+		icon: Cog,
+		step: "03"
+	},
+	{
+		title: "Molding & Pressing",
+		text: "Synchronized servo compression and high-frequency molding.",
+		icon: Boxes,
+		step: "04"
+	},
+	{
+		title: "Curing & Hardening",
+		text: "Steam curing chambers to raise structural block density.",
+		icon: Layers3,
+		step: "05"
+	},
+	{
+		title: "Product Handling & Packaging",
+		text: "Robotic clamp stacking, strap wrapping, and dispatch shipping.",
+		icon: PackageCheck,
+		step: "06"
+	}
+];
+// Manufacturing Strength Section Features (Section 5 checkmarks)
+export const recognitions = [
+	{ title: "Advanced Technology" },
+	{ title: "Global Support" },
+	{ title: "Sustainable Solutions" },
+	{ title: "Reliable Performance" }
+];
+// Global Presence (Section 6 map stats)
+export const globalStats = [
+	{
+		value: "120+",
+		label: "Countries"
+	},
+	{
+		value: "10,000+",
+		label: "Machines Installed"
+	},
+	{
+		value: "Thousands",
+		label: "Happy Customers"
+	},
+	{
+		value: "215,000 m²",
+		label: "Manufacturing Area"
+	}
+];
+// Client Success Stories (Section 7 testimonials)
+export const testimonials = [
+	{
+		quote: "Zenith machines have increased our production capacity by 40% and ensured unmatched reliability.",
+		author: "Rahul Sharma",
+		company: "CEO, BuildTech India",
+		stars: 5
+	},
+	{
+		quote: "Exceptional build quality and after-sales support. Zenith is a partner we can always count on.",
+		author: "Ahmed Al-Fahad",
+		company: "Operations Director, Desert Blocks LLC",
+		stars: 5
+	},
+	{
+		quote: "Advanced technology with robust performance. Our go-to choice for high-performance production.",
+		author: "Manuel Rivera",
+		company: "Plant Manager, SolidForm USA",
+		stars: 5
+	}
+];
+export const news = [
+	{
+		date: "20 May 2026",
+		category: "Innovation",
+		title: "Intelligent forming controls raise consistency across block types",
+		summary: "How precision automation supports faster changeovers and reliable finished products."
+	},
+	{
+		date: "04 Apr 2026",
+		category: "Projects",
+		title: "New automated block line prepared for international delivery",
+		summary: "A complete production configuration moves from assembly to commissioning support."
+	},
+	{
+		date: "16 Mar 2026",
+		category: "Exhibition",
+		title: "ULTRA Tile Machine presents efficient equipment concepts at industry expo",
+		summary: "Visitors explored lower-waste production, handling automation and digital servicing."
+	}
+];
+export const footerProducts = [
+	{
+		name: "Zenith 1500",
+		href: "/product/zenith-1500"
+	},
+	{
+		name: "Zenith 940",
+		href: "/product/zenith-940"
+	},
+	{
+		name: "Zenith 1200",
+		href: "/product/zenith-1200"
+	},
+	{
+		name: "Zenith Quantum 1200",
+		href: "/product/zenith-quantum-1200"
+	}
+];
+
+//# sourceMappingURL=data:application/json;base64,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RSxPQUFPO0VBQVcsT0FBTztDQUFxQjtDQUNoRDtFQUFFLE9BQU87RUFBYSxPQUFPO0NBQWtCO0NBQy9DO0VBQUUsT0FBTztFQUFjLE9BQU87Q0FBcUI7QUFDckQ7O0FBR0EsT0FBTyxNQUFNLGVBQWU7Q0FDMUI7RUFDRSxPQUFPO0VBQ1AsUUFBUTtFQUNSLFNBQVM7RUFDVCxPQUFPO0NBQ1Q7Q0FDQTtFQUNFLE9BQU87RUFDUCxRQUFRO0VBQ1IsU0FBUztFQUNULE9BQU87Q0FDVDtDQUNBO0VBQ0UsT0FBTztFQUNQLFFBQVE7RUFDUixTQUFTO0VBQ1QsT0FBTztDQUNUO0FBQ0Y7QUFFQSxPQUFPLE1BQU0sT0FBTztDQUNsQjtFQUNFLE1BQU07RUFDTixVQUFVO0VBQ1YsT0FBTztFQUNQLFNBQVM7Q0FDWDtDQUNBO0VBQ0UsTUFBTTtFQUNOLFVBQVU7RUFDVixPQUFPO0VBQ1AsU0FBUztDQUNYO0NBQ0E7RUFDRSxNQUFNO0VBQ04sVUFBVTtFQUNWLE9BQU87RUFDUCxTQUFTO0NBQ1g7QUFDRjtBQUVBLE9BQU8sTUFBTSxpQkFBaUI7Q0FDNUI7RUFBRSxNQUFNO0VBQWUsTUFBTTtDQUF1QjtDQUNwRDtFQUFFLE1BQU07RUFBYyxNQUFNO0NBQXNCO0NBQ2xEO0VBQUUsTUFBTTtFQUFlLE1BQU07Q0FBdUI7Q0FDcEQ7RUFBRSxNQUFNO0VBQXVCLE1BQU07Q0FBK0I7QUFDdEUiLCJuYW1lcyI6W10sInNvdXJjZXMiOlsic2l0ZURhdGEuanMiXSwidmVyc2lvbiI6Mywic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtcclxuICBCb3hlcyxcclxuICBCcmlja1dhbGwsXHJcbiAgQnVpbGRpbmcyLFxyXG4gIENvZyxcclxuICBDb25zdHJ1Y3Rpb24sXHJcbiAgRmFjdG9yeSxcclxuICBHbG9iZTIsXHJcbiAgSGVhZHNldCxcclxuICBMYXllcnMzLFxyXG4gIE1pY3Jvc2NvcGUsXHJcbiAgUGFja2FnZUNoZWNrLFxyXG4gIFNldHRpbmdzMixcclxuICBTaGllbGRDaGVjayxcclxuICBXcmVuY2gsXHJcbiAgQ3B1LFxyXG4gIFdvcmtmbG93LFxyXG4gIFNwYXJrbGVzLFxyXG4gIEFycm93VXBSaWdodCxcclxuICBUcmVuZGluZ1VwLFxyXG4gIEhhcmRIYXQsXHJcbiAgTW9uaXRvckNoZWNrXHJcbn0gZnJvbSBcImx1Y2lkZS1yZWFjdFwiO1xyXG5pbXBvcnQgeyBhc3NldEltYWdlIH0gZnJvbSBcIi4vaW1hZ2VBc3NldHNcIjtcclxuXHJcbmV4cG9ydCBjb25zdCBwcm9kdWN0Q2F0ZWdvcmllcyA9IFtcclxuICB7XHJcbiAgICBpZDogXCJibG9jay1tYWtpbmctbWFjaGluZVwiLFxyXG4gICAgbmFtZTogXCJCbG9jayBNYWtpbmcgTWFjaGluZVwiLFxyXG4gICAgaW1hZ2U6IGFzc2V0SW1hZ2UoMSksXHJcbiAgICBkZXNjcmlwdGlvbjogXCJHZXJtYW4tZW5naW5lZXJlZCBibG9jayBmb3JtaW5nIG1hY2hpbmVzIG9wdGltaXplZCBmb3IgaGlnaC1jb21wYWN0aW9uIGJsb2NrcyBhbmQgcGF2ZXJzLlwiLFxyXG4gICAgZmVhdHVyZXM6IFtcIlZpYnJhdGlvbiBjb21wYWN0aW9uXCIsIFwiRmFzdCBjaGFuZ2VvdmVyc1wiLCBcIkludGVncmF0ZWQgY29udHJvbHNcIl0sXHJcbiAgICBzdWJJdGVtczogW1xyXG4gICAgICB7XHJcbiAgICAgICAgaWQ6IFwiemVuaXRoLTE1MDBcIixcclxuICAgICAgICBuYW1lOiBcIlplbml0aCAxNTAwXCIsXHJcbiAgICAgICAgaW1hZ2U6IGFzc2V0SW1hZ2UoMiksXHJcbiAgICAgICAgZGVzY3JpcHRpb246IFwiQXV0b21hdGljIEJsb2NrIE1ha2luZyBNYWNoaW5lIGZlYXR1cmluZyBwcmVtaXVtIHNlcnZvIHZpYnJhdGlvbiB0YWJsZSBhbmQgY2xvdWQgbW9uaXRvcmluZyBjb250cm9scy5cIixcclxuICAgICAgICBzcGVjczogeyBcIkNhcGFjaXR5XCI6IFwiMTUwMCBCbG9ja3MvaHJcIiwgXCJQYWxsZXQgU2l6ZVwiOiBcIjExMDAgeCA5NTAgbW1cIiwgXCJWaWJyYXRpb24gRm9yY2VcIjogXCI4MCBrTlwiLCBcIkNvbnRyb2wgU3lzdGVtXCI6IFwiU2llbWVucyBQTENcIiB9LFxyXG4gICAgICAgIGZlYXR1cmVzOiBbXCJTZXJ2byBkcml2ZSBjb21wYWN0aW9uXCIsIFwiU21hcnQgY2xvdWQgZGlhZ25vc3RpY3NcIiwgXCJBdXRvbWF0aWMgcGFsbGV0IGZlZWRlclwiXVxyXG4gICAgICB9LFxyXG4gICAgICB7XHJcbiAgICAgICAgaWQ6IFwiemVuaXRoLTk0MFwiLFxyXG4gICAgICAgIG5hbWU6IFwiWmVuaXRoIDk0MFwiLFxyXG4gICAgICAgIGltYWdlOiBhc3NldEltYWdlKDMpLFxyXG4gICAgICAgIGRlc2NyaXB0aW9uOiBcIkhpZ2gtUGVyZm9ybWFuY2UgTW9iaWxlIEJsb2NrIE1hY2hpbmUgZGVzaWduZWQgZm9yIGZsZXhpYmxlIHByb2R1Y3Rpb24gb2YgcGF2ZXJzLCBob2xsb3cgYmxvY2tzLCBhbmQgY3VyYnN0b25lLlwiLFxyXG4gICAgICAgIHNwZWNzOiB7IFwiQ2FwYWNpdHlcIjogXCI5NDAgQmxvY2tzL2hyXCIsIFwiUGFsbGV0IFNpemVcIjogXCI5NTAgeCA4NTAgbW1cIiwgXCJWaWJyYXRpb24gRm9yY2VcIjogXCI2NSBrTlwiLCBcIkNvbnRyb2wgU3lzdGVtXCI6IFwiU2llbWVucyBQTENcIiB9LFxyXG4gICAgICAgIGZlYXR1cmVzOiBbXCJNb2JpbGUgcHJvZHVjdGlvblwiLCBcIkZsZXhpYmxlIG1vbGQgY29uZmlndXJhdGlvbnNcIiwgXCJBZ2dyZWdhdGVzIGRpc3RyaWJ1dGlvbiBsb2FkZXJcIl1cclxuICAgICAgfVxyXG4gICAgXVxyXG4gIH1cclxuXTtcclxuXHJcbmV4cG9ydCBjb25zdCBzdGF0cyA9IFtcclxuICB7IHZhbHVlOiBcIjMwK1wiLCBsYWJlbDogXCJZZWFycyBvZiBFeGNlbGxlbmNlXCIgfSxcclxuICB7IHZhbHVlOiBcIjEyMCtcIiwgbGFiZWw6IFwiQ291bnRyaWVzIFNlcnZlZFwiIH0sXHJcbiAgeyB2YWx1ZTogXCIxMCwwMDArXCIsIGxhYmVsOiBcIk1hY2hpbmVzIERlbGl2ZXJlZFwiIH0sXHJcbiAgeyB2YWx1ZTogXCIyMTUsMDAwIG3CslwiLCBsYWJlbDogXCJNYW51ZmFjdHVyaW5nIEFyZWFcIiB9LFxyXG5dO1xyXG5cclxuZXhwb3J0IGNvbnN0IGZpbHRlcnMgPSBbXHJcbiAgXCJBTEwgTUFDSElORVNcIixcclxuICBcIkJMT0NLIE1BS0lOR1wiLFxyXG4gIFwiUEFWRVJTXCIsXHJcbiAgXCJDVVJCSU5HXCIsXHJcbiAgXCJNSVhJTkdcIixcclxuICBcIkJBVENISU5HXCIsXHJcbl07XHJcblxyXG4vLyBHcmlkIG9mIDggbWFjaGluZXMgaW4gU2VjdGlvbiAyXHJcbmV4cG9ydCBjb25zdCBwcm9kdWN0cyA9IFtcclxuICB7XHJcbiAgICBpZDogXCJ6ZW5pdGgtMTUwMFwiLFxyXG4gICAgdGl0bGU6IFwiWmVuaXRoIDE1MDBcIixcclxuICAgIHN1YnRpdGxlOiBcIkF1dG9tYXRpYyBCbG9jayBNYWtpbmcgTWFjaGluZVwiLFxyXG4gICAgY2F0ZWdvcnk6IFwiQkxPQ0sgTUFLSU5HXCIsXHJcbiAgICBpbWFnZTogYXNzZXRJbWFnZSgxKSxcclxuICAgIGNhcGFjaXR5OiBcIjE1MDAgQmxvY2tzL2hyXCIsXHJcbiAgICBkZXNjcmlwdGlvbjogXCJQcmVtaXVtIGF1dG9tYXRpYyBibG9jayBhbmQgcGF2ZXIgZm9ybWluZyBwbGF0Zm9ybSB3aXRoIHN5bmNocm9uaXplZCBzZXJ2byB2aWJyYXRpb24gY29tcGFjdGlvbi5cIixcclxuICAgIGZlYXR1cmVzOiBbXCJTZXJ2byB2aWJyYXRpb25cIiwgXCJTaWVtZW5zIGNvbnRyb2xcIl0sXHJcbiAgICBiYWRnZTogXCJCRVNUIFNFTExFUlwiXHJcbiAgfSxcclxuICB7XHJcbiAgICBpZDogXCJ6ZW5pdGgtOTQwXCIsXHJcbiAgICB0aXRsZTogXCJaZW5pdGggOTQwXCIsXHJcbiAgICBzdWJ0aXRsZTogXCJIaWdoLVBlcmZvcm1hbmNlIEJsb2NrIE1hY2hpbmVcIixcclxuICAgIGNhdGVnb3J5OiBcIkJMT0NLIE1BS0lOR1wiLFxyXG4gICAgaW1hZ2U6IGFzc2V0SW1hZ2UoMiksXHJcbiAgICBjYXBhY2l0eTogXCI5NDAgQmxvY2tzL2hyXCIsXHJcbiAgICBkZXNjcmlwdGlvbjogXCJVbml2ZXJzYWwgbW9iaWxlL2xheWluZyBtYWNoaW5lIGZvciBob2xsb3cgYmxvY2tzLCBzb2xpZCBicmlja3MsIGFuZCBjdXJic3RvbmVzLlwiLFxyXG4gICAgZmVhdHVyZXM6IFtcIkxheWluZyBtYWNoaW5lXCIsIFwiRmFzdCBjaGFuZ2VvdmVyc1wiXSxcclxuICAgIGJhZGdlOiBudWxsXHJcbiAgfSxcclxuICB7XHJcbiAgICBpZDogXCJ6ZW5pdGgtMTIwMFwiLFxyXG4gICAgdGl0bGU6IFwiWmVuaXRoIDEyMDBcIixcclxuICAgIHN1YnRpdGxlOiBcIk11bHRpLUZ1bmN0aW9uYWwgQmxvY2sgTWFjaGluZVwiLFxyXG4gICAgY2F0ZWdvcnk6IFwiUEFWRVJTXCIsXHJcbiAgICBpbWFnZTogYXNzZXRJbWFnZSgzKSxcclxuICAgIGNhcGFjaXR5OiBcIjEyMDAgQmxvY2tzL2hyXCIsXHJcbiAgICBkZXNjcmlwdGlvbjogXCJTdGF0aW9uYXJ5IG11bHRpbGF5ZXIgbWFjaGluZSBmb3IgcGF2ZXJzLCBibG9ja3MsIGFuZCB2YXJpb3VzIGNvbmNyZXRlIGVsZW1lbnRzLlwiLFxyXG4gICAgZmVhdHVyZXM6IFtcIlN0YXRpb25hcnkgbXVsdGlsYXllclwiLCBcIkZsZXhpYmxlIGxheW91dFwiXSxcclxuICAgIGJhZGdlOiBudWxsXHJcbiAgfSxcclxuICB7XHJcbiAgICBpZDogXCJ6ZW5pdGgtcXVhbnR1bS0xMjAwXCIsXHJcbiAgICB0aXRsZTogXCJaZW5pdGggUXVhbnR1bSAxMjAwXCIsXHJcbiAgICBzdWJ0aXRsZTogXCJGdWxseS1BdXRvbWF0aWMgQmxvY2sgTWFjaGluZVwiLFxyXG4gICAgY2F0ZWdvcnk6IFwiQkxPQ0sgTUFLSU5HXCIsXHJcbiAgICBpbWFnZTogYXNzZXRJbWFnZSg0KSxcclxuICAgIGNhcGFjaXR5OiBcIjEyMDAgQmxvY2tzL2hyXCIsXHJcbiAgICBkZXNjcmlwdGlvbjogXCJJbnRlbGxpZ2VudCBzdGF0aW9uYXJ5IG1hY2hpbmUgb3B0aW1pemVkIGZvciBtdWx0aS1zaGlmdCBjb25jcmV0ZSBibG9jayBwcm9kdWN0aW9uLlwiLFxyXG4gICAgZmVhdHVyZXM6IFtcIkZ1bGx5IGF1dG9tYXRlZFwiLCBcIkhlYXZ5LWR1dHkgZnJhbWVcIl0sXHJcbiAgICBiYWRnZTogbnVsbFxyXG4gIH0sXHJcbiAge1xyXG4gICAgaWQ6IFwiemVuaXRoLXJoaW5vLTkwMFwiLFxyXG4gICAgdGl0bGU6IFwiWmVuaXRoIFJoaW5vIDkwMFwiLFxyXG4gICAgc3VidGl0bGU6IFwiSHlkcmF1bGljIEJsb2NrIE1ha2luZyBNYWNoaW5lXCIsXHJcbiAgICBjYXRlZ29yeTogXCJDVVJCSU5HXCIsXHJcbiAgICBpbWFnZTogYXNzZXRJbWFnZSg1KSxcclxuICAgIGNhcGFjaXR5OiBcIjkwMCBCbG9ja3MvaHJcIixcclxuICAgIGRlc2NyaXB0aW9uOiBcIkhpZ2gtY29tcGFjdGlvbiBoeWRyYXVsaWMgbWFjaGluZSBlbmdpbmVlcmVkIGZvciBjdXJiaW5nIGFuZCBzcGVjaWFsdHkgZWxlbWVudHMuXCIsXHJcbiAgICBmZWF0dXJlczogW1wiSHlkcmF1bGljIGNvbXBhY3Rpb25cIiwgXCJXZWFyLXJlc2lzdGFudCBtb2xkc1wiXSxcclxuICAgIGJhZGdlOiBudWxsXHJcbiAgfSxcclxuICB7XHJcbiAgICBpZDogXCJ6ZW5pdGgtbXVsdGktNC4wXCIsXHJcbiAgICB0aXRsZTogXCJaZW5pdGggTXVsdGkgNC4wXCIsXHJcbiAgICBzdWJ0aXRsZTogXCJNdWx0aS1GdW5jdGlvbmFsIE1peGluZyBNYWNoaW5lXCIsXHJcbiAgICBjYXRlZ29yeTogXCJNSVhJTkdcIixcclxuICAgIGltYWdlOiBhc3NldEltYWdlKDYpLFxyXG4gICAgY2FwYWNpdHk6IFwiVmFyaWFibGUgT3V0cHV0XCIsXHJcbiAgICBkZXNjcmlwdGlvbjogXCJJbnRlbGxpZ2VudCBtaXhpbmcgYW5kIGZlZWRpbmcgc3lzdGVtIHN1aXRlZCBmb3IgY3VzdG9tIGNvbmNyZXRlIGZvcm11bGFzLlwiLFxyXG4gICAgZmVhdHVyZXM6IFtcIlZhcmlhYmxlIHNwZWVkXCIsIFwiUHJlY2lzaW9uIHdlaWdoaW5nXCJdLFxyXG4gICAgYmFkZ2U6IG51bGxcclxuICB9LFxyXG4gIHtcclxuICAgIGlkOiBcInplbml0aC1jdWJpZVwiLFxyXG4gICAgdGl0bGU6IFwiWmVuaXRoIEN1YmllXCIsXHJcbiAgICBzdWJ0aXRsZTogXCJDb21wYWN0ICYgQ29uY3JldGUgTWl4aW5nIE1hY2hpbmVcIixcclxuICAgIGNhdGVnb3J5OiBcIk1JWElOR1wiLFxyXG4gICAgaW1hZ2U6IGFzc2V0SW1hZ2UoNyksXHJcbiAgICBjYXBhY2l0eTogXCJIaWdoIE91dHB1dFwiLFxyXG4gICAgZGVzY3JpcHRpb246IFwiQ29tcGFjdCBwYW4gbWl4ZXIgY29uZmlnIG9wdGltaXplZCBmb3IgcXVpY2sgY3ljbGUgdGltZXMgYW5kIHVuaWZvcm0gY29sb3IgYmF0Y2hlcy5cIixcclxuICAgIGZlYXR1cmVzOiBbXCJDb21wYWN0IGZvb3RwcmludFwiLCBcIkhpZ2ggZWZmaWNpZW5jeVwiXSxcclxuICAgIGJhZGdlOiBudWxsXHJcbiAgfSxcclxuICB7XHJcbiAgICBpZDogXCJ6ZW5pdGgtbWFzdGVyLTEyMDBcIixcclxuICAgIHRpdGxlOiBcIlplbml0aCBNYXN0ZXIgMTIwMFwiLFxyXG4gICAgc3VidGl0bGU6IFwiVmlicmF0aW9uLUJhc2VkIE1peGluZyBNYWNoaW5lXCIsXHJcbiAgICBjYXRlZ29yeTogXCJCQVRDSElOR1wiLFxyXG4gICAgaW1hZ2U6IGFzc2V0SW1hZ2UoOCksXHJcbiAgICBjYXBhY2l0eTogXCIxMjAwIEJsb2Nrcy9oclwiLFxyXG4gICAgZGVzY3JpcHRpb246IFwiRnVsbCBiYXRjaGluZyBwbGFudCB1bml0IGRlc2lnbmVkIHRvIHByZXBhcmUgYWdncmVnYXRlcyBmb3IgbGFyZ2UgbW9sZGluZyBtYWNoaW5lcy5cIixcclxuICAgIGZlYXR1cmVzOiBbXCJDb250aW51b3VzIGJhdGNoaW5nXCIsIFwiU2llbWVucyBjb250cm9sIG1vZHVsZXNcIl0sXHJcbiAgICBiYWRnZTogbnVsbFxyXG4gIH1cclxuXTtcclxuXHJcbi8vIFdoeSBDaG9vc2UgWmVuaXRoIEhpZ2hsaWdodCAoU2VjdGlvbiAzIExlZnQgU2hvd2Nhc2UpXHJcbmV4cG9ydCBjb25zdCBob3RTYWxlcyA9IFtcclxuICB7XHJcbiAgICBuYW1lOiBcIlFTIDEwMDAgU3VwZXJzb25pYyBCbG9jayBNYWNoaW5lXCIsXHJcbiAgICBpbWFnZTogYXNzZXRJbWFnZSg5KSxcclxuICAgIG91dHB1dDogXCJTdXBlcnNvbmljIGZvcm1pbmdcIixcclxuICAgIHRleHQ6IFwiRW5naW5lZXJlZCB3aXRoIG1vZGVybiBzeW5jaHJvbml6ZWQgc2Vydm8gZHJpdmUgY29tcGFjdGlvbiBhbmQgY2xvdWQgZGlhZ25vc3RpYyBpbnRlZ3JhdGlvbi5cIixcclxuICAgIHRhZ3M6IFtcIlNlcnZvIHZpYnJhdGlvblwiLCBcIlNtYXJ0IHRlbGVtZXRyeVwiLCBcIlJhcGlkIG1vdWxkIGNoYW5nZVwiXSxcclxuICB9XHJcbl07XHJcblxyXG4vLyBXaHkgQ2hvb3NlIFplbml0aCBTdWJjb21wb25lbnRzIChTZWN0aW9uIDMgUmlnaHQgR3JpZClcclxuZXhwb3J0IGNvbnN0IHN0cmVuZ3RocyA9IFtcclxuICB7XHJcbiAgICB0aXRsZTogXCJaZW5pdGggUGFuIE1peGVyXCIsXHJcbiAgICBkZXNjcmlwdGlvbjogXCJDb25zaXN0ZW50ICYgSGlnaC1PdXRwdXQgTWl4aW5nXCIsXHJcbiAgICBpY29uOiBDb2dcclxuICB9LFxyXG4gIHtcclxuICAgIHRpdGxlOiBcIlplbml0aCBCYXRjaGluZyBQbGFudFwiLFxyXG4gICAgZGVzY3JpcHRpb246IFwiQWNjdXJhdGUgQmF0Y2hpbmcgRXZlcnkgVGltZVwiLFxyXG4gICAgaWNvbjogQ29uc3RydWN0aW9uXHJcbiAgfSxcclxuICB7XHJcbiAgICB0aXRsZTogXCJaZW5pdGggQ29udHJvbCBTeXN0ZW1cIixcclxuICAgIGRlc2NyaXB0aW9uOiBcIlNtYXJ0IENvbnRyb2wsIFNtYXJ0IFByb2R1Y3Rpb25cIixcclxuICAgIGljb246IENwdVxyXG4gIH0sXHJcbiAge1xyXG4gICAgdGl0bGU6IFwiWmVuaXRoIFN0YWNrZXJcIixcclxuICAgIGRlc2NyaXB0aW9uOiBcIkZhc3QsIFNhZmUgJiBFZmZpY2llbnQgU3RhY2tpbmdcIixcclxuICAgIGljb246IFBhY2thZ2VDaGVja1xyXG4gIH1cclxuXTtcclxuXHJcbi8vIENvbXBsZXRlIFBhdGggRnJvbSBNYXRlcmlhbCB0byBGaW5pc2hlZCBQcm9kdWN0IChTZWN0aW9uIDQgRmxvdylcclxuZXhwb3J0IGNvbnN0IHNvbHV0aW9ucyA9IFtcclxuICB7XHJcbiAgICB0aXRsZTogXCJSYXcgTWF0ZXJpYWwgSGFuZGxpbmdcIixcclxuICAgIHRleHQ6IFwiU3RvcmluZyBhbmQgY29udmV5aW5nIGJ1bGsgYWdncmVnYXRlcywgc2FuZCwgYW5kIGNlbWVudC5cIixcclxuICAgIGljb246IEZhY3RvcnksXHJcbiAgICBzdGVwOiBcIjAxXCJcclxuICB9LFxyXG4gIHtcclxuICAgIHRpdGxlOiBcIlByb3BvcnRpb25pbmcgJiBCYXRjaGluZ1wiLFxyXG4gICAgdGV4dDogXCJIaWdoLXByZWNpc2lvbiBhZ2dyZWdhdGUgYW5kIGJpbmRlciB3ZWlnaHQgZG9zaW5nLlwiLFxyXG4gICAgaWNvbjogQ29uc3RydWN0aW9uLFxyXG4gICAgc3RlcDogXCIwMlwiXHJcbiAgfSxcclxuICB7XHJcbiAgICB0aXRsZTogXCJNaXhpbmcgJiBGZWVkaW5nXCIsXHJcbiAgICB0ZXh0OiBcIkludGVuc2l2ZSBob21vZ2VuaXppbmcgbWl4ZXIgZmVlZGluZyBibG9jayBtYWNoaW5lIGhvcHBlci5cIixcclxuICAgIGljb246IENvZyxcclxuICAgIHN0ZXA6IFwiMDNcIlxyXG4gIH0sXHJcbiAge1xyXG4gICAgdGl0bGU6IFwiTW9sZGluZyAmIFByZXNzaW5nXCIsXHJcbiAgICB0ZXh0OiBcIlN5bmNocm9uaXplZCBzZXJ2byBjb21wcmVzc2lvbiBhbmQgaGlnaC1mcmVxdWVuY3kgbW9sZGluZy5cIixcclxuICAgIGljb246IEJveGVzLFxyXG4gICAgc3RlcDogXCIwNFwiXHJcbiAgfSxcclxuICB7XHJcbiAgICB0aXRsZTogXCJDdXJpbmcgJiBIYXJkZW5pbmdcIixcclxuICAgIHRleHQ6IFwiU3RlYW0gY3VyaW5nIGNoYW1iZXJzIHRvIHJhaXNlIHN0cnVjdHVyYWwgYmxvY2sgZGVuc2l0eS5cIixcclxuICAgIGljb246IExheWVyczMsXHJcbiAgICBzdGVwOiBcIjA1XCJcclxuICB9LFxyXG4gIHtcclxuICAgIHRpdGxlOiBcIlByb2R1Y3QgSGFuZGxpbmcgJiBQYWNrYWdpbmdcIixcclxuICAgIHRleHQ6IFwiUm9ib3RpYyBjbGFtcCBzdGFja2luZywgc3RyYXAgd3JhcHBpbmcsIGFuZCBkaXNwYXRjaCBzaGlwcGluZy5cIixcclxuICAgIGljb246IFBhY2thZ2VDaGVjayxcclxuICAgIHN0ZXA6IFwiMDZcIlxyXG4gIH1cclxuXTtcclxuXHJcbi8vIE1hbnVmYWN0dXJpbmcgU3RyZW5ndGggU2VjdGlvbiBGZWF0dXJlcyAoU2VjdGlvbiA1IGNoZWNrbWFya3MpXHJcbmV4cG9ydCBjb25zdCByZWNvZ25pdGlvbnMgPSBbXHJcbiAgeyB0aXRsZTogXCJBZHZhbmNlZCBUZWNobm9sb2d5XCIgfSxcclxuICB7IHRpdGxlOiBcIkdsb2JhbCBTdXBwb3J0XCIgfSxcclxuICB7IHRpdGxlOiBcIlN1c3RhaW5hYmxlIFNvbHV0aW9uc1wiIH0sXHJcbiAgeyB0aXRsZTogXCJSZWxpYWJsZSBQZXJmb3JtYW5jZVwiIH1cclxuXTtcclxuXHJcbi8vIEdsb2JhbCBQcmVzZW5jZSAoU2VjdGlvbiA2IG1hcCBzdGF0cylcclxuZXhwb3J0IGNvbnN0IGdsb2JhbFN0YXRzID0gW1xyXG4gIHsgdmFsdWU6IFwiMTIwK1wiLCBsYWJlbDogXCJDb3VudHJpZXNcIiB9LFxyXG4gIHsgdmFsdWU6IFwiMTAsMDAwK1wiLCBsYWJlbDogXCJNYWNoaW5lcyBJbnN0YWxsZWRcIiB9LFxyXG4gIHsgdmFsdWU6IFwiVGhvdXNhbmRzXCIsIGxhYmVsOiBcIkhhcHB5IEN1c3RvbWVyc1wiIH0sXHJcbiAgeyB2YWx1ZTogXCIyMTUsMDAwIG3CslwiLCBsYWJlbDogXCJNYW51ZmFjdHVyaW5nIEFyZWFcIiB9XHJcbl07XHJcblxyXG4vLyBDbGllbnQgU3VjY2VzcyBTdG9yaWVzIChTZWN0aW9uIDcgdGVzdGltb25pYWxzKVxyXG5leHBvcnQgY29uc3QgdGVzdGltb25pYWxzID0gW1xyXG4gIHtcclxuICAgIHF1b3RlOiBcIlplbml0aCBtYWNoaW5lcyBoYXZlIGluY3JlYXNlZCBvdXIgcHJvZHVjdGlvbiBjYXBhY2l0eSBieSA0MCUgYW5kIGVuc3VyZWQgdW5tYXRjaGVkIHJlbGlhYmlsaXR5LlwiLFxyXG4gICAgYXV0aG9yOiBcIlJhaHVsIFNoYXJtYVwiLFxyXG4gICAgY29tcGFueTogXCJDRU8sIEJ1aWxkVGVjaCBJbmRpYVwiLFxyXG4gICAgc3RhcnM6IDVcclxuICB9LFxyXG4gIHtcclxuICAgIHF1b3RlOiBcIkV4Y2VwdGlvbmFsIGJ1aWxkIHF1YWxpdHkgYW5kIGFmdGVyLXNhbGVzIHN1cHBvcnQuIFplbml0aCBpcyBhIHBhcnRuZXIgd2UgY2FuIGFsd2F5cyBjb3VudCBvbi5cIixcclxuICAgIGF1dGhvcjogXCJBaG1lZCBBbC1GYWhhZFwiLFxyXG4gICAgY29tcGFueTogXCJPcGVyYXRpb25zIERpcmVjdG9yLCBEZXNlcnQgQmxvY2tzIExMQ1wiLFxyXG4gICAgc3RhcnM6IDVcclxuICB9LFxyXG4gIHtcclxuICAgIHF1b3RlOiBcIkFkdmFuY2VkIHRlY2hub2xvZ3kgd2l0aCByb2J1c3QgcGVyZm9ybWFuY2UuIE91ciBnby10byBjaG9pY2UgZm9yIGhpZ2gtcGVyZm9ybWFuY2UgcHJvZHVjdGlvbi5cIixcclxuICAgIGF1dGhvcjogXCJNYW51ZWwgUml2ZXJhXCIsXHJcbiAgICBjb21wYW55OiBcIlBsYW50IE1hbmFnZXIsIFNvbGlkRm9ybSBVU0FcIixcclxuICAgIHN0YXJzOiA1XHJcbiAgfVxyXG5dO1xyXG5cclxuZXhwb3J0IGNvbnN0IG5ld3MgPSBbXHJcbiAge1xyXG4gICAgZGF0ZTogXCIyMCBNYXkgMjAyNlwiLFxyXG4gICAgY2F0ZWdvcnk6IFwiSW5ub3ZhdGlvblwiLFxyXG4gICAgdGl0bGU6IFwiSW50ZWxsaWdlbnQgZm9ybWluZyBjb250cm9scyByYWlzZSBjb25zaXN0ZW5jeSBhY3Jvc3MgYmxvY2sgdHlwZXNcIixcclxuICAgIHN1bW1hcnk6IFwiSG93IHByZWNpc2lvbiBhdXRvbWF0aW9uIHN1cHBvcnRzIGZhc3RlciBjaGFuZ2VvdmVycyBhbmQgcmVsaWFibGUgZmluaXNoZWQgcHJvZHVjdHMuXCIsXHJcbiAgfSxcclxuICB7XHJcbiAgICBkYXRlOiBcIjA0IEFwciAyMDI2XCIsXHJcbiAgICBjYXRlZ29yeTogXCJQcm9qZWN0c1wiLFxyXG4gICAgdGl0bGU6IFwiTmV3IGF1dG9tYXRlZCBibG9jayBsaW5lIHByZXBhcmVkIGZvciBpbnRlcm5hdGlvbmFsIGRlbGl2ZXJ5XCIsXHJcbiAgICBzdW1tYXJ5OiBcIkEgY29tcGxldGUgcHJvZHVjdGlvbiBjb25maWd1cmF0aW9uIG1vdmVzIGZyb20gYXNzZW1ibHkgdG8gY29tbWlzc2lvbmluZyBzdXBwb3J0LlwiLFxyXG4gIH0sXHJcbiAge1xyXG4gICAgZGF0ZTogXCIxNiBNYXIgMjAyNlwiLFxyXG4gICAgY2F0ZWdvcnk6IFwiRXhoaWJpdGlvblwiLFxyXG4gICAgdGl0bGU6IFwiVUxUUkEgVGlsZSBNYWNoaW5lIHByZXNlbnRzIGVmZmljaWVudCBlcXVpcG1lbnQgY29uY2VwdHMgYXQgaW5kdXN0cnkgZXhwb1wiLFxyXG4gICAgc3VtbWFyeTogXCJWaXNpdG9ycyBleHBsb3JlZCBsb3dlci13YXN0ZSBwcm9kdWN0aW9uLCBoYW5kbGluZyBhdXRvbWF0aW9uIGFuZCBkaWdpdGFsIHNlcnZpY2luZy5cIixcclxuICB9XHJcbl07XHJcblxyXG5leHBvcnQgY29uc3QgZm9vdGVyUHJvZHVjdHMgPSBbXHJcbiAgeyBuYW1lOiBcIlplbml0aCAxNTAwXCIsIGhyZWY6IFwiL3Byb2R1Y3QvemVuaXRoLTE1MDBcIiB9LFxyXG4gIHsgbmFtZTogXCJaZW5pdGggOTQwXCIsIGhyZWY6IFwiL3Byb2R1Y3QvemVuaXRoLTk0MFwiIH0sXHJcbiAgeyBuYW1lOiBcIlplbml0aCAxMjAwXCIsIGhyZWY6IFwiL3Byb2R1Y3QvemVuaXRoLTEyMDBcIiB9LFxyXG4gIHsgbmFtZTogXCJaZW5pdGggUXVhbnR1bSAxMjAwXCIsIGhyZWY6IFwiL3Byb2R1Y3QvemVuaXRoLXF1YW50dW0tMTIwMFwiIH0sXHJcbl07XHJcbiJdfQ==

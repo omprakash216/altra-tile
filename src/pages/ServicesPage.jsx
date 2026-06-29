@@ -49,7 +49,7 @@ export default function ServicesPage() {
               {services.map(({ title, text, icon: iconName }) => {
                 const Icon = resolveIcon(iconName);
                 return (
-                  <div key={title} className="flex gap-6 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+                  <div key={title} className="flex flex-col gap-5 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:flex-row sm:gap-6 sm:p-8">
                     <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-orange-500/10 text-orange-600">
                       <Icon size={26} />
                     </span>
@@ -89,7 +89,7 @@ export default function ServicesPage() {
               </div>
             </div>
           </div>
-          <div className="relative min-h-[350px] overflow-hidden rounded-[2rem] border border-white/10 bg-[#0b1b2d] p-6 sm:min-h-[410px]">
+          <div className="relative min-h-[320px] overflow-hidden rounded-[2rem] border border-white/10 bg-[#0b1b2d] p-4 sm:min-h-[410px] sm:p-6">
             <div className="absolute inset-0 map-grid opacity-30" />
             <svg className="absolute inset-5 h-[calc(100%-2.5rem)] w-[calc(100%-2.5rem)] text-slate-600" viewBox="0 0 800 410" aria-label="Worldwide service coverage" role="img">
               <g fill="currentColor" opacity=".46">
@@ -109,7 +109,7 @@ export default function ServicesPage() {
                 ))}
               </g>
             </svg>
-            <div className="absolute bottom-7 left-7 right-7 flex items-center gap-4 rounded-2xl border border-white/10 bg-slate-950/60 p-4 backdrop-blur">
+            <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3 rounded-2xl border border-white/10 bg-slate-950/60 p-4 backdrop-blur sm:bottom-7 sm:left-7 sm:right-7 sm:gap-4">
               <Globe2 className="shrink-0 text-orange-500" size={30} />
               <p className="text-sm font-semibold text-white">Coordinated technical support across six continents</p>
             </div>
@@ -120,7 +120,7 @@ export default function ServicesPage() {
       {/* Service Request Form */}
       <section className="py-20">
         <div className="container-shell max-w-[800px]">
-          <div className="rounded-[2.5rem] border border-slate-200 bg-white p-8 shadow-sm sm:p-12">
+          <div className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-12 lg:rounded-[2.5rem]">
             <div className="text-center">
               <h2 className="font-display text-2xl font-bold text-slate-950 sm:text-3xl">Submit a Service Request</h2>
               <p className="mt-3 text-sm text-slate-600">Need operational support, spare parts advice, or an engineer site visit? Let us know.</p>

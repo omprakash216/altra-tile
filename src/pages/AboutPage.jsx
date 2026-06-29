@@ -133,7 +133,7 @@ export default function AboutPage() {
               </p>
 
               {/* 4 Feature Circles */}
-              <div className="mt-10 grid grid-cols-2 gap-6 max-w-md">
+              <div className="mt-10 grid max-w-md grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6">
                 {(about?.bullet_points?.length ? about.bullet_points : [
                   "Advanced Technology",
                   "Reliable Performance",
@@ -231,7 +231,7 @@ export default function AboutPage() {
           </div>
 
           {/* Interactive Horizontal Timeline */}
-          <div className="relative mt-20 max-w-5xl mx-auto hidden md:block">
+          <div className="relative mt-20 mx-auto hidden max-w-5xl lg:block">
             {/* Connector Line */}
             <div className="absolute top-[18px] left-0 right-0 h-0.5 bg-white/10" />
             
@@ -262,7 +262,7 @@ export default function AboutPage() {
           </div>
 
           {/* Mobile Vertical Timeline */}
-          <div className="relative mt-12 max-w-xl mx-auto md:hidden pl-6 border-l border-white/10 text-left space-y-10">
+          <div className="relative mx-auto mt-12 max-w-xl border-l border-white/10 pl-6 text-left space-y-10 lg:hidden">
             {milestones.map((milestone, idx) => (
               <div key={idx} className="relative">
                 {/* Bullet */}
@@ -322,7 +322,7 @@ export default function AboutPage() {
               Committed to international Quality
             </h2>
 
-            <div className="mt-10 grid grid-cols-2 gap-4">
+            <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
               {[
                 { title: "ISO 9001:2015", desc: "Certified Facility" },
                 { title: "CE CERTIFIED", desc: "European Quality" },
@@ -344,7 +344,7 @@ export default function AboutPage() {
               Delivering Excellence Worldwide
             </h2>
 
-            <div className="mt-10 grid gap-8 grid-cols-[1.2fr_0.8fr] items-center">
+            <div className="mt-10 grid gap-8 sm:grid-cols-[1.2fr_0.8fr] sm:items-center">
               {/* World Map Graphic */}
               <div className="relative aspect-[1.5] w-full bg-[#0a1523]/5 rounded-3xl border border-slate-100 p-4 overflow-hidden flex items-center justify-center">
                 <svg className="w-full h-full opacity-30 text-navy-950" viewBox="0 0 1000 500" fill="currentColor">
@@ -460,7 +460,7 @@ export default function AboutPage() {
           </div>
 
           {/* Right Consultation Form Card */}
-          <div className="bg-[#fcfcfa] rounded-[2.5rem] border border-slate-100 shadow-2xl p-8 sm:p-10 text-slate-900 text-left">
+          <div className="rounded-[2rem] border border-slate-100 bg-[#fcfcfa] p-6 text-left text-slate-900 shadow-2xl sm:p-10 lg:rounded-[2.5rem]">
             <h3 className="font-display text-xl font-extrabold text-navy-950">
               Get a Free Consultation
             </h3>

@@ -19,7 +19,12 @@ import {
 import { getFallbackCategories, getFallbackProduct } from './data/catalogData';
 import { products as fallbackHomeProducts } from './data/siteData';
 
-export const API_BASE = 'http://localhost/ULTRATECH/backend/api';
+const apiHost =
+  typeof window !== 'undefined' && window.location.hostname
+    ? window.location.hostname
+    : 'localhost';
+
+export const API_BASE = `http://${apiHost}/ULTRATECH/backend/api`;
 
 const iconMap = {
   Boxes,
@@ -68,7 +73,7 @@ function normalizeProductRecord(product, slug) {
     product.categoryId ||
     slugifyText(categoryName) ||
     '';
-  const image = homeProduct?.image || product.image || '';
+  const image = product.image || homeProduct?.image || '';
   const name = product.name || product.title || homeProduct?.title || slug;
   const title = product.title || product.name || homeProduct?.title || name;
 
